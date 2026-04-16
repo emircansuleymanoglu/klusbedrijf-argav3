@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 76" role="img" aria-label="ARGA klusbedrijf">
+  <!-- Geometric Diamond Icon -->
+  <g fill="none" stroke="currentColor" stroke-linejoin="miter">
+    <!-- Outer diamond -->
+    <polygon points="38,2 74,38 38,74 2,38" stroke-width="4.5"/>
+    <!-- Middle diamond -->
+    <polygon points="38,16 60,38 38,60 16,38" stroke-width="3.8"/>
+    <!-- Inner square (corners at midpoints of middle diamond sides) -->
+    <rect x="27" y="27" width="22" height="22" stroke-width="3.2"/>
+    <!-- Cross: middle diamond corners → inner square edge midpoints -->
+    <line x1="38" y1="16" x2="38" y2="27" stroke-width="3.8"/>
+    <line x1="60" y1="38" x2="49" y2="38" stroke-width="3.8"/>
+    <line x1="38" y1="60" x2="38" y2="49" stroke-width="3.8"/>
+    <line x1="16" y1="38" x2="27" y2="38" stroke-width="3.8"/>
+  </g>
+  <!-- ARGA text -->
+  <text x="90" y="50"
+        font-family="'Arial Black','Arial',sans-serif"
+        font-weight="900" font-size="42" fill="currentColor" letter-spacing="1">ARGA</text>
+  <!-- klusbedrijf text -->
+  <text x="94" y="67"
+        font-family="'Arial','Helvetica',sans-serif"
+        font-weight="400" font-size="15" fill="currentColor" letter-spacing="2.5">klusbedrijf</text>
+</svg>

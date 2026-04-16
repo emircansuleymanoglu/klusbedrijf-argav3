@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argaklus â€“ Klusbedrijf Eindhoven</title>
+  <meta name="description" content="Argaklus â€“ Professioneel klusbedrijf in Eindhoven. Aluminium balkonleuningen, tuinbestrating, badkamerrenovatie en betonvloeren." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+  <style>
+    /* INDEX-ONLY STYLES */
+    .services { padding: 80px 0; background: var(--white); }
+    .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
+    .service-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 22px; transition: all .25s; cursor: pointer; position: relative; overflow: hidden; display: block; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--primary-light); }
+    .service-card__icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px; }
+    .service-card h3 { font-size: 17px; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px; }
+    .service-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+    .service-card__arrow { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 13px; font-weight: 600; margin-top: 14px; transition: gap .2s; }
+    .service-card:hover .service-card__arrow { gap: 10px; }
+
+    .section-split { padding: 80px 0; }
+    .section-split.alt { background: var(--white); }
+    .split-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .split-inner.reverse { direction: rtl; }
+    .split-inner.reverse > * { direction: ltr; }
+    .split-content h2 { font-size: clamp(24px,3.5vw,36px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; }
+    .split-content p { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 14px; }
+    @media(max-width:960px){ .split-inner { grid-template-columns:1fr; gap:36px; } .split-inner.reverse { direction:ltr; } }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" />
+      </a>
+      <ul class="navbar__menu">
+        <li>
+          <a href="#diensten">
+            <span data-lang="nl" class="lang-active">Diensten â–¾</span>
+            <span data-lang="en">Services â–¾</span>
+            <span data-lang="tr">Hizmetler â–¾</span>
+          </a>
+          <div class="dropdown">
+            <a href="aluminium-balkonleuningen.html">
+              <span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span>
+              <span data-lang="en">Aluminium Balcony Railings</span>
+              <span data-lang="tr">AlÃ¼minyum Balkon KorkuluklarÄ±</span>
+            </a>
+            <a href="tuinwerkzaamheden.html">
+              <span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span>
+              <span data-lang="en">Garden Works</span>
+              <span data-lang="tr">BahÃ§e Ä°ÅŸlemleri</span>
+            </a>
+            <a href="badkamer-renovatie.html">
+              <span data-lang="nl" class="lang-active">Badkamer &amp; Toilet Renovatie</span>
+              <span data-lang="en">Bathroom &amp; Toilet Renovation</span>
+              <span data-lang="tr">Banyo &amp; Tuvalet Yenileme</span>
+            </a>
+            <a href="betonvloer-storten.html">
+              <span data-lang="nl" class="lang-active">Betonvloer Storten</span>
+              <span data-lang="en">Concrete Floor Pouring</span>
+              <span data-lang="tr">Beton Zemin DÃ¶kÃ¼m</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <span data-lang="nl" class="lang-active">Informatie â–¾</span>
+            <span data-lang="en">Information â–¾</span>
+            <span data-lang="tr">Bilgi â–¾</span>
+          </a>
+          <div class="dropdown">
+            <a href="aluminium-balkonleuningen.html#info">
+              <span data-lang="nl" class="lang-active">Aluminium Leuning Eindhoven</span>
+              <span data-lang="en">Aluminium Railing Eindhoven</span>
+              <span data-lang="tr">AlÃ¼minyum Korkuluk Eindhoven</span>
+            </a>
+            <a href="tuinwerkzaamheden.html#info">
+              <span data-lang="nl" class="lang-active">Tuinbestrating Eindhoven</span>
+              <span data-lang="en">Garden Paving Eindhoven</span>
+              <span data-lang="tr">BahÃ§e DÃ¶ÅŸeme Eindhoven</span>
+            </a>
+            <a href="badkamer-renovatie.html#info">
+              <span data-lang="nl" class="lang-active">Badkamer Renovatie Eindhoven</span>
+              <span data-lang="en">Bathroom Renovation Eindhoven</span>
+              <span data-lang="tr">Banyo Yenileme Eindhoven</span>
+            </a>
+            <a href="betonvloer-storten.html#info">
+              <span data-lang="nl" class="lang-active">Betonvloer Eindhoven</span>
+              <span data-lang="en">Concrete Floor Eindhoven</span>
+              <span data-lang="tr">Beton Zemin Eindhoven</span>
+            </a>
+            <a href="#contact">
+              <span data-lang="nl" class="lang-active">Gratis Offerte</span>
+              <span data-lang="en">Free Quote</span>
+              <span data-lang="tr">Ãœcretsiz Teklif</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="#contact">
+          <span data-lang="nl" class="lang-active">Contact</span>
+          <span data-lang="en">Contact</span>
+          <span data-lang="tr">Ä°letiÅŸim</span>
+        </a></li>
+      </ul>
+      <div class="navbar__right">
+        <a href="#contact" class="btn btn-primary">
+          <span data-lang="nl" class="lang-active">Gratis Offerte</span>
+          <span data-lang="en">Free Quote</span>
+          <span data-lang="tr">Ãœcretsiz Teklif</span>
+        </a>
+        <button class="navbar__burger" id="burgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <p class="mob-section-title" data-lang="nl" style="display:block">Diensten</p>
+  <p class="mob-section-title" data-lang="en">Services</p>
+  <p class="mob-section-title" data-lang="tr">Hizmetler</p>
+  <a href="aluminium-balkonleuningen.html" class="mob-link">
+    <span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span>
+    <span data-lang="en">Aluminium Balcony Railings</span>
+    <span data-lang="tr">AlÃ¼minyum Balkon KorkuluklarÄ±</span>
+  </a>
+  <a href="tuinwerkzaamheden.html" class="mob-link">
+    <span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span>
+    <span data-lang="en">Garden Works</span>
+    <span data-lang="tr">BahÃ§e Ä°ÅŸlemleri</span>
+  </a>
+  <a href="badkamer-renovatie.html" class="mob-link">
+    <span data-lang="nl" class="lang-active">Badkamer &amp; Toilet Renovatie</span>
+    <span data-lang="en">Bathroom &amp; Toilet Renovation</span>
+    <span data-lang="tr">Banyo &amp; Tuvalet Yenileme</span>
+  </a>
+  <a href="betonvloer-storten.html" class="mob-link">
+    <span data-lang="nl" class="lang-active">Betonvloer Storten</span>
+    <span data-lang="en">Concrete Floor Pouring</span>
+    <span data-lang="tr">Beton Zemin DÃ¶kÃ¼m</span>
+  </a>
+  <p class="mob-section-title">Info</p>
+  <a href="#contact" class="mob-link">
+    <span data-lang="nl" class="lang-active">Contact &amp; Gratis Offerte</span>
+    <span data-lang="en">Contact &amp; Free Quote</span>
+    <span data-lang="tr">Ä°letiÅŸim &amp; Ãœcretsiz Teklif</span>
+  </a>
+  <a href="#contact" class="btn btn-primary" style="display:block; text-align:center; margin-top:16px;">
+    <span data-lang="nl" class="lang-active">Gratis Offerte Aanvragen</span>
+    <span data-lang="en">Request Free Quote</span>
+    <span data-lang="tr">Ãœcretsiz Teklif Al</span>
+  </a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div>
+        <h1 data-lang="nl" class="lang-active">Alles onder<br /><span>Ã©Ã©n dak</span></h1>
+        <h1 data-lang="en">Everything under<br /><span>one roof</span></h1>
+        <h1 data-lang="tr">Her ÅŸey tek<br /><span>Ã§atÄ± altÄ±nda</span></h1>
+        <p class="hero-lead" data-lang="nl" class="lang-active">Van balkonleuningen en tuinbestrating tot badkamerrenovatie en betonvloeren. Professioneel, betrouwbaar en op tijd in Eindhoven.</p>
+        <p class="hero-lead" data-lang="en">From balcony railings and garden paving to bathroom renovation and concrete floors. Professional and reliable in Eindhoven.</p>
+        <p class="hero-lead" data-lang="tr">Balkon korkuluklarÄ±ndan bahÃ§e dÃ¶ÅŸemesine, banyo yenilemeye ve beton zeminlere kadar. Eindhoven'da profesyonel hizmet.</p>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn-white">
+            <span data-lang="nl" class="lang-active">Gratis Offerte Aanvragen</span>
+            <span data-lang="en">Request Free Quote</span>
+            <span data-lang="tr">Ãœcretsiz Teklif Al</span>
+          </a>
+          <a href="#diensten" class="btn btn-ghost">
+            <span data-lang="nl" class="lang-active">Onze Diensten</span>
+            <span data-lang="en">Our Services</span>
+            <span data-lang="tr">Hizmetlerimiz</span>
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><strong>500+</strong><span data-lang="nl" class="lang-active">Projecten</span><span data-lang="en">Projects</span><span data-lang="tr">Proje</span></div>
+          <div class="hero__stat"><strong>15+</strong><span data-lang="nl" class="lang-active">Jaar ervaring</span><span data-lang="en">Years exp.</span><span data-lang="tr">YÄ±l deneyim</span></div>
+          <div class="hero__stat"><strong>100%</strong><span data-lang="nl" class="lang-active">Tevredenheid</span><span data-lang="en">Satisfaction</span><span data-lang="tr">Memnuniyet</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="hero__slideshow" id="heroSlideshow">
+          <img src="img/karisik/kar-1.jpg" alt="Argaklus" class="active" />
+          <img src="img/karisik/kar-2.jpg" alt="Argaklus" />
+          <img src="img/karisik/kar-3.jpg" alt="Argaklus" />
+          <img src="img/karisik/kar-4.jpg" alt="Argaklus" />
+          <img src="img/karisik/kar-5.jpg" alt="Argaklus" />
+          <img src="img/karisik/kar-6.jpg" alt="Argaklus" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar__inner">
+      <div class="trust-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span data-lang="nl" class="lang-active">Snelle oplevering</span><span data-lang="en">Fast delivery</span><span data-lang="tr">HÄ±zlÄ± teslim</span></div>
+      <div class="trust-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><span data-lang="nl" class="lang-active">VCA gecertificeerd</span><span data-lang="en">VCA certified</span><span data-lang="tr">VCA sertifikalÄ±</span></div>
+      <div class="trust-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></div><span data-lang="nl" class="lang-active">Garantie op werk</span><span data-lang="en">Work guarantee</span><span data-lang="tr">Ä°ÅŸ garantisi</span></div>
+      <div class="trust-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span data-lang="nl" class="lang-active">Altijd bereikbaar</span><span data-lang="en">Always reachable</span><span data-lang="tr">Her zaman ulaÅŸÄ±labilir</span></div>
+      <div class="trust-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><circle cx="7" cy="7" r="1" fill="currentColor"/></svg></div><span data-lang="nl" class="lang-active">Transparante prijzen</span><span data-lang="en">Transparent prices</span><span data-lang="tr">Åeffaf fiyatlar</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== DIENSTEN ========== -->
+<section class="services" id="diensten">
+  <div class="container">
+    <div class="tag"><span data-lang="nl" class="lang-active">Onze Diensten</span><span data-lang="en">Our Services</span><span data-lang="tr">Hizmetlerimiz</span></div>
+    <h2 class="section-title"><span data-lang="nl" class="lang-active">Wat kunnen wij voor u betekenen?</span><span data-lang="en">How can we help you?</span><span data-lang="tr">Size nasÄ±l yardÄ±mcÄ± olabiliriz?</span></h2>
+    <div class="services__grid">
+      <a href="aluminium-balkonleuningen.html" class="service-card">
+        <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v17"/><path d="M20 3v17"/><path d="M12 3v17"/><path d="M2 8h20"/><path d="M2 16h20"/></svg></div>
+        <h3 data-lang="nl" class="lang-active">Aluminium Balkonleuningen</h3><h3 data-lang="en">Aluminium Balcony Railings</h3><h3 data-lang="tr">AlÃ¼minyum Balkon KorkuluklarÄ±</h3>
+        <p data-lang="nl" class="lang-active">Stijlvolle en duurzame aluminium balkonleuningen op maat voor uw woning of gebouw.</p><p data-lang="en">Stylish and durable custom aluminium balcony railings for your home or building.</p><p data-lang="tr">Eviniz veya binanÄ±z iÃ§in ÅŸÄ±k ve dayanÄ±klÄ± Ã¶zel alÃ¼minyum balkon korkuluklarÄ±.</p>
+        <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen â†’</span><span data-lang="en">Read more â†’</span><span data-lang="tr">DevamÄ±nÄ± oku â†’</span></div>
+      </a>
+      <a href="tuinwerkzaamheden.html" class="service-card">
+        <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div>
+        <h3 data-lang="nl" class="lang-active">Tuinwerkzaamheden</h3><h3 data-lang="en">Garden Works</h3><h3 data-lang="tr">BahÃ§e Ä°ÅŸlemleri</h3>
+        <p data-lang="nl" class="lang-active">Tuinbestrating, terras aanleg en complete tuinrenovatie van A tot Z.</p><p data-lang="en">Garden paving, terrace and complete garden renovation from A to Z.</p><p data-lang="tr">BahÃ§e dÃ¶ÅŸemesi, teras ve A'dan Z'ye komple bahÃ§e yenileme.</p>
+        <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen â†’</span><span data-lang="en">Read more â†’</span><span data-lang="tr">DevamÄ±nÄ± oku â†’</span></div>
+      </a>
+      <a href="badkamer-renovatie.html" class="service-card">
+        <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg></div>
+        <h3 data-lang="nl" class="lang-active">Badkamer &amp; Toilet Renovatie</h3><h3 data-lang="en">Bathroom &amp; Toilet Renovation</h3><h3 data-lang="tr">Banyo &amp; Tuvalet Yenileme</h3>
+        <p data-lang="nl" class="lang-active">Complete renovatie in slechts 2â€“5 dagen met minimaal breekwerk.</p><p data-lang="en">Complete renovation in just 2â€“5 days with minimal demolition work.</p><p data-lang="tr">Minimum yÄ±kÄ±mla yalnÄ±zca 2â€“5 gÃ¼nde tam yenileme.</p>
+        <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen â†’</span><span data-lang="en">Read more â†’</span><span data-lang="tr">DevamÄ±nÄ± oku â†’</span></div>
+      </a>
+      <a href="betonvloer-storten.html" class="service-card">
+        <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg></div>
+        <h3 data-lang="nl" class="lang-active">Betonvloer Storten</h3><h3 data-lang="en">Concrete Floor Pouring</h3><h3 data-lang="tr">Beton Zemin DÃ¶kÃ¼m</h3>
+        <p data-lang="nl" class="lang-active">Gestorte betonvloeren voor woningen, garages, aanbouwen en bedrijfshallen.</p><p data-lang="en">Poured concrete floors for homes, garages, extensions and industrial halls.</p><p data-lang="tr">Konutlar, garajlar, eklentiler ve endÃ¼striyel salonlar iÃ§in dÃ¶kÃ¼m beton zeminler.</p>
+        <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen â†’</span><span data-lang="en">Read more â†’</span><span data-lang="tr">DevamÄ±nÄ± oku â†’</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECT OVERLAY CARDS PREVIEW ========== -->
+<section class="overlay-showcase" id="aanbouw-uitbouw">
+  <div class="container">
+    <div class="overlay-grid">
+      <article class="overlay-card">
+        <img src="img/aanbouw-uitbouw.jpg" alt="Aanbouw en uitbouw project van Argaklus" />
+        <div class="overlay-card__content">
+          <p class="overlay-card__label">Nieuwe dienst</p>
+          <h2>Aanbouw / Uitbouw</h2>
+          <p>Breid uw leefruimte uit en verhoog de waarde van uw huis met een aanbouw of uitbouw.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SPLIT: BALKON ========== -->
+<section class="section-split alt">
+  <div class="container">
+    <div class="split-inner">
+      <div class="img-gallery">
+        <img src="img/aluminium/al-1.jpg" alt="Balkonleuning" />
+        <img src="img/aluminium/al-2.jpg" alt="Balkonleuning" />
+        <img src="img/aluminium/al-3.jpg" alt="Balkonleuning" />
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span><span data-lang="en">Aluminium Railings</span><span data-lang="tr">Balkon KorkuluklarÄ±</span></div>
+        <h2 data-lang="nl" class="lang-active">Veilig, stijlvol en duurzaam</h2><h2 data-lang="en">Safe, stylish and durable</h2><h2 data-lang="tr">GÃ¼venli, ÅŸÄ±k ve dayanÄ±klÄ±</h2>
+        <p data-lang="nl" class="lang-active">Aluminium balkonleuningen zijn structurele elementen die op balkons van gebouwen worden gebruikt om veiligheid en een esthetische uitstraling te bieden. Met diverse ontwerpmogelijkheden passen ze bij elk architectuurstijl.</p>
+        <p data-lang="en">Aluminium balcony railings provide both safety and aesthetic appeal. With various design options they suit every architectural style.</p>
+        <p data-lang="tr">AlÃ¼minyum balkon korkuluklarÄ± hem gÃ¼venlik hem estetik saÄŸlar. Ã‡eÅŸitli tasarÄ±m seÃ§enekleriyle her mimari tarza uyum saÄŸlar.</p>
+        <ul class="feature-list">
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Bestand tegen weer en corrosie</span><span data-lang="en">Weather and corrosion resistant</span><span data-lang="tr">Hava ve korozyona karÅŸÄ± direnÃ§li</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Diverse kleuren en ontwerpen</span><span data-lang="en">Various colours and designs</span><span data-lang="tr">Ã‡eÅŸitli renk ve tasarÄ±mlar</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Volledig op maat gemaakt</span><span data-lang="en">Fully custom made</span><span data-lang="tr">Tamamen Ã¶zel Ã¼retim</span></li>
+        </ul>
+        <a href="aluminium-balkonleuningen.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie â†’</span><span data-lang="en">More information â†’</span><span data-lang="tr">Daha fazla bilgi â†’</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: BAHÃ‡E -->
+<section class="section-split">
+  <div class="container">
+    <div class="split-inner reverse">
+      <div class="img-gallery">
+        <img src="img/bahce/bahce-1.jpg" alt="Tuinbestrating" />
+        <img src="img/bahce/bahce-2.jpg" alt="Tuinbestrating" />
+        <img src="img/bahce/bahce-3.jpg" alt="Tuinbestrating" />
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span><span data-lang="en">Garden Works</span><span data-lang="tr">BahÃ§e Ä°ÅŸlemleri</span></div>
+        <h2 data-lang="nl" class="lang-active">Tuinbestrating laten aanleggen?</h2><h2 data-lang="en">Garden paving installation?</h2><h2 data-lang="tr">BahÃ§e dÃ¶ÅŸemesi yaptÄ±rmak mÄ±?</h2>
+        <p data-lang="nl" class="lang-active">Tuinbestrating aanleggen is bij ons maatwerk van A tot Z. Van het uitgraven en opbouwen van de juiste onderlaag tot het leggen en voegen van keramische tegels of andere bestrating.</p>
+        <p data-lang="en">Garden paving is fully custom work from A to Z. From excavating and building the right base to laying and grouting ceramic tiles or other paving.</p>
+        <p data-lang="tr">BahÃ§e dÃ¶ÅŸemesi A'dan Z'ye tam Ã¶zel yapÄ±m. KazÄ±dan doÄŸru alt taban oluÅŸturulmasÄ±na, seramik karo veya dÃ¶ÅŸeme yerleÅŸtirme ve derzlemeye kadar.</p>
+        <ul class="feature-list">
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Terras, oprit & tuinrenovatie</span><span data-lang="en">Terrace, driveway & garden renovation</span><span data-lang="tr">Teras, garaj yolu ve bahÃ§e yenileme</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Wij ontzorgen voor 110%</span><span data-lang="en">We take care of everything 110%</span><span data-lang="tr">Her ÅŸeyi %110 Ã¼stleniyoruz</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Strak en duurzaam resultaat</span><span data-lang="en">Neat and durable result</span><span data-lang="tr">DÃ¼zgÃ¼n ve kalÄ±cÄ± sonuÃ§</span></li>
+        </ul>
+        <a href="tuinwerkzaamheden.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie â†’</span><span data-lang="en">More information â†’</span><span data-lang="tr">Daha fazla bilgi â†’</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: BADKAMER -->
+<section class="section-split alt">
+  <div class="container">
+    <div class="split-inner">
+      <div class="img-gallery">
+        <img src="img/badkamer/bdk-1.jpg" alt="Badkamer" />
+        <img src="img/badkamer/bdk-2.jpg" alt="Badkamer" />
+        <img src="img/badkamer/bdk-3.jpg" alt="Badkamer" />
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Badkamer &amp; Toilet</span><span data-lang="en">Bathroom &amp; Toilet</span><span data-lang="tr">Banyo &amp; Tuvalet</span></div>
+        <h2 data-lang="nl" class="lang-active">Complete renovatie in 2â€“5 dagen</h2><h2 data-lang="en">Complete renovation in 2â€“5 days</h2><h2 data-lang="tr">2â€“5 gÃ¼nde komple yenileme</h2>
+        <p data-lang="nl" class="lang-active">Wij renoveren je badkamer of toilet volledig in slechts 2â€“5 dagen, met minimaal breek- en sloopwerk. Van inloopdouche en vloer tot meubel, toilet en verlaagd plafond.</p>
+        <p data-lang="en">We fully renovate your bathroom or toilet in just 2â€“5 days with minimal demolition work. From walk-in shower and floor to furniture, toilet and dropped ceiling.</p>
+        <p data-lang="tr">Banyonuzu veya tuvaletinizi minimum yÄ±kÄ±mla yalnÄ±zca 2â€“5 gÃ¼nde tamamen yeniliyoruz. YÃ¼rÃ¼yÃ¼ÅŸ duÅŸundan zemine, mobilyadan asma tavana kadar.</p>
+        <ul class="feature-list">
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Al 1.000+ badkamers vernieuwd</span><span data-lang="en">Already 1,000+ bathrooms renewed</span><span data-lang="tr">1.000+ banyo baÅŸarÄ±yla yenilenmiÅŸtir</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Eigen montageteam</span><span data-lang="en">Own installation team</span><span data-lang="tr">Kendi montaj ekibimiz</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Alles op maat naar uw wensen</span><span data-lang="en">Everything tailored to your wishes</span><span data-lang="tr">Her ÅŸey isteklerinize Ã¶zel</span></li>
+        </ul>
+        <a href="badkamer-renovatie.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie â†’</span><span data-lang="en">More information â†’</span><span data-lang="tr">Daha fazla bilgi â†’</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: BETON -->
+<section class="section-split">
+  <div class="container">
+    <div class="split-inner reverse">
+      <div class="img-gallery">
+        <img src="img/beton/beton-1.jpg" alt="Betonvloer" />
+        <img src="img/beton/beton-2.jpg" alt="Betonvloer" />
+        <img src="img/beton/beton-3.jpg" alt="Betonvloer" />
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Betonvloer Storten</span><span data-lang="en">Concrete Floors</span><span data-lang="tr">Beton Zemin DÃ¶kÃ¼m</span></div>
+        <h2 data-lang="nl" class="lang-active">Betonvloer storten in Eindhoven</h2><h2 data-lang="en">Concrete floor pouring in Eindhoven</h2><h2 data-lang="tr">Eindhoven'da beton zemin dÃ¶kÃ¼m</h2>
+        <p data-lang="nl" class="lang-active">Gespecialiseerd in betonvloer storten voor woningen, garages, aanbouwen en bedrijfshallen. Jarenlange ervaring en een strakke, egale afwerking gegarandeerd.</p>
+        <p data-lang="en">Specialised in concrete floor pouring for homes, garages, extensions and industrial halls. Years of experience and a neat, even finish guaranteed.</p>
+        <p data-lang="tr">Konutlar, garajlar, eklentiler ve endÃ¼striyel salonlar iÃ§in beton zemin dÃ¶kÃ¼mÃ¼nde uzman. YÄ±llarca deneyim ve dÃ¼zgÃ¼n, eÅŸit yÃ¼zey garantisi.</p>
+        <ul class="feature-list">
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Woningen, garages & bedrijfshallen</span><span data-lang="en">Homes, garages & business halls</span><span data-lang="tr">Konutlar, garajlar ve iÅŸ salonlarÄ±</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Jarenlange specialistische ervaring</span><span data-lang="en">Years of specialist experience</span><span data-lang="tr">YÄ±llarca uzman deneyim</span></li>
+          <li><div class="check">âœ“</div><span data-lang="nl" class="lang-active">Strakke en egale afwerking</span><span data-lang="en">Neat and even finish</span><span data-lang="tr">DÃ¼zgÃ¼n ve eÅŸit yÃ¼zey</span></li>
+        </ul>
+        <a href="betonvloer-storten.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie â†’</span><span data-lang="en">More information â†’</span><span data-lang="tr">Daha fazla bilgi â†’</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner__inner">
+      <h2 data-lang="nl" class="lang-active">Klaar om uw project te starten?<br /><em>Vraag vandaag nog een gratis offerte aan.</em></h2>
+      <h2 data-lang="en">Ready to start your project?<br /><em>Request a free quote today.</em></h2>
+      <h2 data-lang="tr">Projenize baÅŸlamaya hazÄ±r mÄ±sÄ±nÄ±z?<br /><em>BugÃ¼n Ã¼cretsiz teklif alÄ±n.</em></h2>
+      <p data-lang="nl" class="lang-active">Wij reageren binnen 24 uur en komen bij u langs voor een vrijblijvend adviesgesprek.</p>
+      <p data-lang="en">We respond within 24 hours and visit you for a no-obligation consultation.</p>
+      <p data-lang="tr">24 saat iÃ§inde yanÄ±t veriyoruz ve Ã¼cretsiz danÄ±ÅŸma iÃ§in ziyaretinize geliyoruz.</p>
+      <div class="cta-banner__btns">
+        <a href="#contact" class="btn btn-accent"><span data-lang="nl" class="lang-active">Gratis Offerte Aanvragen</span><span data-lang="en">Request Free Quote</span><span data-lang="tr">Ãœcretsiz Teklif Al</span></a>
+        <a href="tel:+31641170208" class="btn btn-ghost">ğŸ“ +31 6 41 17 02 08</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="tag">Contact</div>
+        <h2 class="section-title"><span data-lang="nl" class="lang-active">Neem contact op</span><span data-lang="en">Get in touch</span><span data-lang="tr">Bize ulaÅŸÄ±n</span></h2>
+        <p class="section-sub"><span data-lang="nl" class="lang-active">Heeft u een project in gedachten? Wij nemen binnen 24 uur contact met u op.</span><span data-lang="en">Do you have a project in mind? We will contact you within 24 hours.</span><span data-lang="tr">AklÄ±nÄ±zda bir proje mi var? 24 saat iÃ§inde sizinle iletiÅŸime geÃ§iyoruz.</span></p>
+        <div class="contact-info-item"><div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong data-lang="nl" class="lang-active">Adres</strong><strong data-lang="en">Address</strong><strong data-lang="tr">Adres</strong><span class="val">Hudsonlaan 220, 5623 NG Eindhoven</span></div></div>
+        <div class="contact-info-item"><div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong data-lang="nl" class="lang-active">Telefoon</strong><strong data-lang="en">Phone</strong><strong data-lang="tr">Telefon</strong><span class="val">+31 6 41 17 02 08</span><span class="val">+31 6 42 56 59 32</span></div></div>
+        <div class="contact-info-item"><div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div><div><strong>E-mail</strong><span class="val">info@argaklus.nl</span></div></div>
+        </div>
+      <div class="form-card">
+        <h3 data-lang="nl" class="lang-active">Offerte Aanvragen</h3><h3 data-lang="en">Request a Quote</h3><h3 data-lang="tr">Teklif Ä°ste</h3>
+        <form id="contactForm" name="offerte" method="POST" data-netlify="true" netlify-honeypot="bot-field">`r`n          <input type="hidden" name="form-name" value="offerte" />`r`n          <p class="hidden" style="display:none;"><label>Laat dit veld leeg: <input name="bot-field" /></label></p>
+          <div class="form-row">
+            <div class="form-group"><label data-lang="nl" class="lang-active">Voornaam</label><label data-lang="en">First name</label><label data-lang="tr">Ad</label><input type="text" name="voornaam" placeholder="Jan" required /></div>
+            <div class="form-group"><label data-lang="nl" class="lang-active">Achternaam</label><label data-lang="en">Last name</label><label data-lang="tr">Soyad</label><input type="text" name="achternaam" placeholder="de Boer" /></div>
+          </div>
+          <div class="form-group"><label data-lang="nl" class="lang-active">Telefoonnummer</label><label data-lang="en">Phone number</label><label data-lang="tr">Telefon numarasÄ±</label><input type="tel" name="telefoon" placeholder="06 12 34 56 78" required /></div>
+          <div class="form-group"><label>E-mail</label><input type="email" name="email" placeholder="jan@voorbeeld.nl" required /></div>
+          <div class="form-group">
+            <label data-lang="nl" class="lang-active">Dienst</label><label data-lang="en">Service</label><label data-lang="tr">Hizmet</label>
+            <select name="dienst">
+              <option value="">Selecteer een dienst...</option>
+              <option value="Aluminium Balkonleuningen">Aluminium Balkonleuningen</option>
+              <option value="Tuinwerkzaamheden">Tuinwerkzaamheden</option>
+              <option value="Badkamer &amp; Toilet Renovatie">Badkamer &amp; Toilet Renovatie</option>
+              <option value="Betonvloer Storten">Betonvloer Storten</option>
+            </select>
+          </div>
+          <div class="form-group"><label data-lang="nl" class="lang-active">Bericht</label><label data-lang="en">Message</label><label data-lang="tr">Mesaj</label><textarea name="bericht" rows="4" placeholder="..."></textarea></div>
+          <div id="formMsg" style="display:none;padding:12px 16px;border-radius:8px;margin-bottom:12px;font-weight:600;font-size:14px;"></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:16px">
+            <span id="formBtnText"><span data-lang="nl" class="lang-active">Verstuur Aanvraag â†’</span><span data-lang="en">Send Request â†’</span><span data-lang="tr">GÃ¶nder â†’</span></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section class="certs">
+  <div class="container">
+    <div class="certs__grid">
+      <div class="cert-card"><div class="cert-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h4>VCA <span data-lang="nl" class="lang-active">Gecertificeerd</span><span data-lang="en">Certified</span><span data-lang="tr">SertifikalÄ±</span></h4><p data-lang="nl" class="lang-active">Veiligheid, gezondheid en milieu centraal op elke bouwplaats.</p><p data-lang="en">Safety, health and environment central on every site.</p><p data-lang="tr">Her yapÄ± alanÄ±nda gÃ¼venlik ve Ã§evre Ã¶nceliÄŸi.</p></div>
+      <div class="cert-card"><div class="cert-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h4>SBB</h4><p data-lang="nl" class="lang-active">Erkend leerbedrijf voor de volgende generatie vakmensen.</p><p data-lang="en">Recognised training company for the next generation.</p><p data-lang="tr">Yeni nesil iÃ§in onaylÄ± eÄŸitim ÅŸirketi.</p></div>
+      <div class="cert-card"><div class="cert-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>NEN 1010</h4><p data-lang="nl" class="lang-active">Elektrotechnische werkzaamheden conform Nederlandse norm.</p><p data-lang="en">Electrical work compliant with Dutch standards.</p><p data-lang="tr">Hollanda standartlarÄ±na uygun elektrik iÅŸleri.</p></div>
+      <div class="cert-card"><div class="cert-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><h4><span data-lang="nl" class="lang-active">Erkend Installateur</span><span data-lang="en">Recognised Installer</span><span data-lang="tr">OnaylÄ± MontajcÄ±</span></h4><p data-lang="nl" class="lang-active">Gecertificeerd voor isolatie en duurzame installaties.</p><p data-lang="en">Certified for insulation and sustainable installations.</p><p data-lang="tr">YalÄ±tÄ±m ve sÃ¼rdÃ¼rÃ¼lebilir kurulumlar iÃ§in sertifikalÄ±.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="f-logo"><img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" /></div>
+        <p data-lang="nl" class="lang-active">Uw betrouwbare kluspartner in Eindhoven. Van balkonleuningen tot betonvloeren.</p><p data-lang="en">Your reliable partner in Eindhoven. From balcony railings to concrete floors.</p><p data-lang="tr">Eindhoven'da gÃ¼venilir iÅŸ ortaÄŸÄ±nÄ±z. Balkon korkuluklarÄ±ndan beton zeminlere.</p>
+        <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>Hudsonlaan 220, 5623 NG Eindhoven</div>
+        <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>+31 6 41 17 02 08</div>
+        <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>+31 6 42 56 59 32</div>
+        <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>info@argaklus.nl</div>
+      </div>
+      <div class="footer__col">
+        <h4 data-lang="nl" class="lang-active">Diensten</h4><h4 data-lang="en">Services</h4><h4 data-lang="tr">Hizmetler</h4>
+        <ul>
+          <li><a href="aluminium-balkonleuningen.html"><span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span><span data-lang="en">Aluminium Railings</span><span data-lang="tr">Balkon KorkuluklarÄ±</span></a></li>
+          <li><a href="tuinwerkzaamheden.html"><span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span><span data-lang="en">Garden Works</span><span data-lang="tr">BahÃ§e Ä°ÅŸlemleri</span></a></li>
+          <li><a href="badkamer-renovatie.html"><span data-lang="nl" class="lang-active">Badkamer &amp; Toilet</span><span data-lang="en">Bathroom &amp; Toilet</span><span data-lang="tr">Banyo &amp; Tuvalet</span></a></li>
+          <li><a href="betonvloer-storten.html"><span data-lang="nl" class="lang-active">Betonvloer Storten</span><span data-lang="en">Concrete Floors</span><span data-lang="tr">Beton Zemin</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-lang="nl" class="lang-active">Informatie</h4><h4 data-lang="en">Information</h4><h4 data-lang="tr">Bilgi</h4>
+        <ul>
+          <li><a href="aluminium-balkonleuningen.html#info"><span data-lang="nl" class="lang-active">Leuning Eindhoven</span><span data-lang="en">Railing Eindhoven</span><span data-lang="tr">Korkuluk Eindhoven</span></a></li>
+          <li><a href="tuinwerkzaamheden.html#info"><span data-lang="nl" class="lang-active">Tuinbestrating</span><span data-lang="en">Garden Paving</span><span data-lang="tr">BahÃ§e DÃ¶ÅŸeme</span></a></li>
+          <li><a href="badkamer-renovatie.html#info"><span data-lang="nl" class="lang-active">Badkamer Eindhoven</span><span data-lang="en">Bathroom Eindhoven</span><span data-lang="tr">Banyo Eindhoven</span></a></li>
+          <li><a href="betonvloer-storten.html#info"><span data-lang="nl" class="lang-active">Betonvloer</span><span data-lang="en">Concrete Floor</span><span data-lang="tr">Beton Zemin</span></a></li>
+          <li><a href="#contact"><span data-lang="nl" class="lang-active">Gratis Offerte</span><span data-lang="en">Free Quote</span><span data-lang="tr">Ãœcretsiz Teklif</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-lang="nl" class="lang-active">Werkgebied</h4><h4 data-lang="en">Area</h4><h4 data-lang="tr">BÃ¶lge</h4>
+        <ul>
+          <li><a href="#">Eindhoven</a></li><li><a href="#">Amstelveen</a></li><li><a href="#">Diemen</a></li><li><a href="#">Almere</a></li><li><a href="#">Haarlem</a></li><li><a href="#">Zaandam</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Â© 2024 Argaklus Klusbedrijf Eindhoven</span>
+      <div class="footer__biz"><a href="#"><span data-lang="nl" class="lang-active">Privacybeleid</span><span data-lang="en">Privacy</span><span data-lang="tr">Gizlilik</span></a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/31641170208" target="_blank" class="wa-float"><div class="wa-tooltip"><span data-lang="nl" class="lang-active">WhatsApp ons</span><span data-lang="en">WhatsApp us</span><span data-lang="tr">WhatsApp yaz</span></div>ğŸ’¬</a>
+<div class="lang-switcher">
+  <button class="lang-btn active" data-switch="nl">ğŸ‡³ğŸ‡±<span class="lang-label">Nederlands</span></button>
+  <button class="lang-btn" data-switch="en">ğŸ‡¬ğŸ‡§<span class="lang-label">English</span></button>
+  <button class="lang-btn" data-switch="tr">ğŸ‡¹ğŸ‡·<span class="lang-label">TÃ¼rkÃ§e</span></button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
