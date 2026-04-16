@@ -1,4 +1,4 @@
-﻿# Argaklus Netlify Deploy
+# Argaklus Netlify Deploy
 
 Deze map is klaar om naar GitHub te uploaden en via Netlify te deployen.
 
