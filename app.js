@@ -1,8 +1,8 @@
-﻿/* ==========================================
-   ARGAKLUS â€“ SHARED JAVASCRIPT
+/* ==========================================
+   ARGAKLUS – SHARED JAVASCRIPT
    ========================================== */
 
-/* â”€â”€ LANGUAGE SWITCHER â”€â”€ */
+/* ── LANGUAGE SWITCHER ── */
 let currentLang = 'nl';
 
 function setLang(lang) {
@@ -28,7 +28,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 const savedLang = localStorage.getItem('argaklus-lang');
 setLang(savedLang && ['nl','en','tr'].includes(savedLang) ? savedLang : 'nl');
 
-/* â”€â”€ HERO SLIDESHOW â”€â”€ */
+/* ── HERO SLIDESHOW ── */
 (function() {
   const el = document.getElementById('heroSlideshow');
   if (!el) return;
@@ -42,7 +42,7 @@ setLang(savedLang && ['nl','en','tr'].includes(savedLang) ? savedLang : 'nl');
   }, 3500);
 })();
 
-/* â”€â”€ SCROLL ANIMATIONS â”€â”€ */
+/* ── SCROLL ANIMATIONS ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -60,7 +60,7 @@ document.querySelectorAll('.service-card, .step-card, .cert-card, .faq-item').fo
   observer.observe(el);
 });
 
-/* â”€â”€ ACTIVE NAV â”€â”€ */
+/* ── ACTIVE NAV ── */
 const navSections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.navbar__menu > li > a');
 window.addEventListener('scroll', () => {
@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 });
 
-/* â”€â”€ FAQ ACCORDION â”€â”€ */
+/* ── FAQ ACCORDION ── */
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
     const item = q.parentElement;
@@ -79,7 +79,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 });
 
-/* â”€â”€ MOBILE MENU â”€â”€ */
+/* ── MOBILE MENU ── */
 (function() {
   const burger = document.getElementById('burgerBtn');
   const overlay = document.getElementById('mobileMenu');
@@ -98,7 +98,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 })();
 
-/* â”€â”€ CONTACT FORM â”€â”€ */
+/* ── CONTACT FORM ── */
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', function(e) {
