@@ -100,7 +100,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
 
 /* IMAGE LIGHTBOX */
 (function() {
-  const images = document.querySelectorAll([
+  const imageSelectors = [
     '.img-gallery img',
     '.img-single img',
     '.gallery-item img',
@@ -108,6 +108,11 @@ document.querySelectorAll('.faq-q').forEach(q => {
     '.detail-hero__img img',
     '.overlay-card img',
     '.hero__slideshow img'
+  ];
+  const images = document.querySelectorAll(imageSelectors.join(','));
+  const clickTargets = document.querySelectorAll([
+    ...imageSelectors,
+    '.gallery-item'
   ].join(','));
   if (!images.length) return;
 
@@ -124,14 +129,20 @@ document.querySelectorAll('.faq-q').forEach(q => {
     document.body.style.overflow = '';
   };
 
-  images.forEach(img => {
-    img.addEventListener('click', event => {
+  const open = (img) => {
+    fullImage.src = img.currentSrc || img.src;
+    fullImage.alt = img.alt || '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  clickTargets.forEach(target => {
+    target.addEventListener('click', event => {
+      const img = target.matches('img') ? target : target.querySelector('img');
+      if (!img) return;
       event.preventDefault();
       event.stopPropagation();
-      fullImage.src = img.currentSrc || img.src;
-      fullImage.alt = img.alt || '';
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      open(img);
     });
   });
 
