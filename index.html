@@ -195,28 +195,20 @@
 
 <!-- ========== HERO ========== -->
 <section class="hero">
-  <div class="hero__slideshow hero__slideshow--bg" id="heroSlideshow" aria-hidden="true">
-    <img src="img/karisik/kar-1.jpg" alt="" class="active" />
-    <img src="img/karisik/kar-2.jpg" alt="" />
-    <img src="img/karisik/kar-3.jpg" alt="" />
-    <img src="img/karisik/kar-4.jpg" alt="" />
-    <img src="img/karisik/kar-5.jpg" alt="" />
-    <img src="img/karisik/kar-6.jpg" alt="" />
-  </div>
   <div class="container">
     <div class="hero__inner">
       <div>
-        <h1 data-lang="nl" class="lang-active">Alles onder<br /><span>één dak</span></h1>
+        <h1 data-lang="nl" class="lang-active">Alles onder<br /><span>een dak</span></h1>
         <h1 data-lang="en">Everything under<br /><span>one roof</span></h1>
-        <h1 data-lang="tr">Her şey tek<br /><span>çatı altında</span></h1>
-        <p class="hero-lead" data-lang="nl" class="lang-active">Van balkonleuningen en tuinbestrating tot badkamerrenovatie en betonvloeren. Professioneel, betrouwbaar en op tijd in Eindhoven.</p>
+        <h1 data-lang="tr">Her sey tek<br /><span>cati altinda</span></h1>
+        <p class="hero-lead lang-active" data-lang="nl">Van balkonleuningen en tuinbestrating tot badkamerrenovatie en betonvloeren. Professioneel, betrouwbaar en op tijd in Eindhoven.</p>
         <p class="hero-lead" data-lang="en">From balcony railings and garden paving to bathroom renovation and concrete floors. Professional and reliable in Eindhoven.</p>
-        <p class="hero-lead" data-lang="tr">Balkon korkuluklarından bahçe döşemesine, banyo yenilemeye ve beton zeminlere kadar. Eindhoven'da profesyonel hizmet.</p>
+        <p class="hero-lead" data-lang="tr">Balkon korkuluklarindan bahce dosemesine, banyo yenilemeye ve beton zeminlere kadar. Eindhoven'da profesyonel hizmet.</p>
         <div class="hero__buttons">
           <a href="#contact" class="btn btn-white">
             <span data-lang="nl" class="lang-active">Gratis Offerte Aanvragen</span>
             <span data-lang="en">Request Free Quote</span>
-            <span data-lang="tr">Ücretsiz Teklif Al</span>
+            <span data-lang="tr">Ucretsiz Teklif Al</span>
           </a>
           <a href="#diensten" class="btn btn-ghost">
             <span data-lang="nl" class="lang-active">Onze Diensten</span>
@@ -226,9 +218,17 @@
         </div>
         <div class="hero__stats">
           <div class="hero__stat"><strong>500+</strong><span data-lang="nl" class="lang-active">Projecten</span><span data-lang="en">Projects</span><span data-lang="tr">Proje</span></div>
-          <div class="hero__stat"><strong>15+</strong><span data-lang="nl" class="lang-active">Jaar ervaring</span><span data-lang="en">Years exp.</span><span data-lang="tr">Yıl deneyim</span></div>
+          <div class="hero__stat"><strong>15+</strong><span data-lang="nl" class="lang-active">Jaar ervaring</span><span data-lang="en">Years exp.</span><span data-lang="tr">Yil deneyim</span></div>
           <div class="hero__stat"><strong>100%</strong><span data-lang="nl" class="lang-active">Tevredenheid</span><span data-lang="en">Satisfaction</span><span data-lang="tr">Memnuniyet</span></div>
         </div>
+      </div>
+      <div class="hero__slideshow" id="heroSlideshow" aria-hidden="true">
+        <img src="img/karisik/kar-1.jpg" alt="" class="active" />
+        <img src="img/karisik/kar-2.jpg" alt="" />
+        <img src="img/karisik/kar-3.jpg" alt="" />
+        <img src="img/karisik/kar-4.jpg" alt="" />
+        <img src="img/karisik/kar-5.jpg" alt="" />
+        <img src="img/karisik/kar-6.jpg" alt="" />
       </div>
     </div>
   </div>
@@ -542,11 +542,14 @@
   </div>
 </footer>
 
-<a href="https://wa.me/31641170208" target="_blank" class="wa-float"><div class="wa-tooltip"><span data-lang="nl" class="lang-active">WhatsApp ons</span><span data-lang="en">WhatsApp us</span><span data-lang="tr">WhatsApp yaz</span></div>💬</a>
+<a href="https://wa.me/31641170208" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <div class="wa-tooltip"><span data-lang="nl" class="lang-active">WhatsApp ons</span><span data-lang="en">WhatsApp us</span><span data-lang="tr">WhatsApp yaz</span></div>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3.2A12.71 12.71 0 0 0 5.2 22.57L3.5 28.8l6.38-1.67A12.7 12.7 0 1 0 16.04 3.2Zm0 2.28a10.43 10.43 0 0 1 8.84 15.98 10.43 10.43 0 0 1-13.8 3.25l-.46-.27-3.79 1 1.01-3.68-.3-.48A10.43 10.43 0 0 1 16.04 5.48Zm-4.43 5.58c-.23 0-.6.08-.92.43-.32.35-1.2 1.18-1.2 2.87 0 1.69 1.23 3.33 1.4 3.56.17.23 2.38 3.81 5.86 5.18 2.9 1.14 3.49.91 4.12.85.63-.06 2.03-.83 2.31-1.63.29-.8.29-1.49.2-1.63-.08-.14-.31-.23-.66-.4-.34-.17-2.03-1-2.35-1.12-.31-.12-.54-.17-.77.17-.23.34-.89 1.12-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.45-.53-2.76-1.7-1.02-.91-1.71-2.03-1.91-2.37-.2-.34-.02-.53.15-.7.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.55-.28-.67-.56-.58-.77-.59h-.65Z"/></svg>
+</a>
 <div class="lang-switcher">
-  <button class="lang-btn active" data-switch="nl">🇳🇱<span class="lang-label">Nederlands</span></button>
-  <button class="lang-btn" data-switch="en">🇬🇧<span class="lang-label">English</span></button>
-  <button class="lang-btn" data-switch="tr">🇹🇷<span class="lang-label">Türkçe</span></button>
+  <button class="lang-btn active" data-switch="nl" aria-label="Nederlands"><span class="flag-icon"><svg viewBox="0 0 3 2"><rect width="3" height="2" fill="#21468b"/><rect width="3" height="1.333" fill="#fff"/><rect width="3" height=".667" fill="#ae1c28"/></svg></span><span class="lang-label">Nederlands</span></button>
+  <button class="lang-btn" data-switch="en" aria-label="English"><span class="flag-icon"><svg viewBox="0 0 60 40"><clipPath id="gb"><path d="M0 0h60v40H0z"/></clipPath><g clip-path="url(#gb)"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/><path stroke="#C8102E" stroke-width="4" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60"/><path stroke="#C8102E" stroke-width="8" d="M30 0v40M0 20h60"/></g></svg></span><span class="lang-label">English</span></button>
+  <button class="lang-btn" data-switch="tr" aria-label="Turkce"><span class="flag-icon"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#e30a17"/><circle cx="12" cy="10" r="5.4" fill="#fff"/><circle cx="13.6" cy="10" r="4.3" fill="#e30a17"/><path fill="#fff" d="m20.2 10 4.7-1.5-2.9 4V7.5l2.9 4z"/></svg></span><span class="lang-label">Turkce</span></button>
 </div>
 
 <script src="app.js"></script>
