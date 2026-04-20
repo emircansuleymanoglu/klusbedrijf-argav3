@@ -98,6 +98,52 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 })();
 
+/* IMAGE LIGHTBOX */
+(function() {
+  const images = document.querySelectorAll([
+    '.img-gallery img',
+    '.img-single img',
+    '.gallery-item img',
+    '.page-hero__img img',
+    '.detail-hero__img img',
+    '.overlay-card img',
+    '.hero__slideshow img'
+  ].join(','));
+  if (!images.length) return;
+
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = '<button class="lightbox__close" type="button" aria-label="Close">&times;</button><img alt="" />';
+  document.body.appendChild(lightbox);
+
+  const fullImage = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.lightbox__close');
+  const close = () => {
+    lightbox.classList.remove('open');
+    fullImage.removeAttribute('src');
+    document.body.style.overflow = '';
+  };
+
+  images.forEach(img => {
+    img.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      fullImage.src = img.currentSrc || img.src;
+      fullImage.alt = img.alt || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) close();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox.classList.contains('open')) close();
+  });
+})();
+
 /* ── CONTACT FORM ── */
 const form = document.getElementById('contactForm');
 if (form) {
