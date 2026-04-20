@@ -182,6 +182,17 @@ setLang(savedLang && supportedLangs.includes(savedLang) ? savedLang : 'nl');
   }, 3500);
 })();
 
+/* ANCHOR SCROLL FIX – prevents Vercel redirect issues on #contact links */
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href="#contact"]');
+  if (!link) return;
+  const target = document.getElementById('contact');
+  if (target) {
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 /* SCROLL ANIMATIONS */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
