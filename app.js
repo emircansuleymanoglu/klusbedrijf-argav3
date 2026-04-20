@@ -81,13 +81,77 @@ const germanText = {
   'Bedrijfshallen': 'Gewerbehallen',
   'Aluminium Eindhoven': 'Aluminium Eindhoven',
   'Badkamer Eindhoven': 'Bad Eindhoven',
-  'Betonvloer Eindhoven': 'Betonboden Eindhoven'
+  'Betonvloer Eindhoven': 'Betonboden Eindhoven',
+
+  /* ── Trust bar ── */
+  'Snelle oplevering': 'Schnelle Fertigstellung',
+  'VCA gecertificeerd': 'VCA zertifiziert',
+  'Garantie op werk': 'Garantie auf Arbeit',
+  'Altijd bereikbaar': 'Immer erreichbar',
+  'Transparante prijzen': 'Transparente Preise',
+
+  /* ── Overlay cards ── */
+  'Breid uw leefruimte uit en verhoog de waarde van uw huis met een aanbouw of uitbouw.': 'Erweitern Sie Ihren Wohnraum und erhöhen Sie den Wert Ihres Hauses mit einem Anbau.',
+  'Een nette vloer vormt de basis voor elke ruimte.': 'Ein sauberer Boden bildet die Grundlage für jeden Raum.',
+  'Veilige, duurzame balkonleuningen op maat voor woning en gebouw.': 'Sichere, langlebige maßgefertigte Balkongeländer für Haus und Gebäude.',
+  'Tuinbestrating, terras aanleg en complete tuinrenovatie van A tot Z.': 'Gartenpflasterung, Terrassenbau und komplette Gartensanierung von A bis Z.',
+  'Complete renovatie met strak tegelwerk, sanitair en nette afwerking.': 'Komplette Renovierung mit sauberer Fliesenarbeit, Sanitär und ordentlicher Verarbeitung.',
+
+  /* ── Service cards ── */
+  'Stijlvolle en duurzame aluminium balkonleuningen op maat voor uw woning of gebouw.': 'Stilvolle und langlebige Aluminium-Balkongeländer nach Maß für Ihr Haus oder Gebäude.',
+  'Complete renovatie in slechts 2\u20135 dagen met minimaal breekwerk.': 'Komplette Renovierung in nur 2\u20135 Tagen mit minimalen Abbrucharbeiten.',
+
+  /* ── Split: Aluminium ── */
+  'Veilig, stijlvol en duurzaam': 'Sicher, stilvoll und langlebig',
+  'Aluminium balkonleuningen zijn structurele elementen die op balkons van gebouwen worden gebruikt om veiligheid en een esthetische uitstraling te bieden. Met diverse ontwerpmogelijkheden passen ze bij elk architectuurstijl.': 'Aluminium-Balkongeländer sind Strukturelemente, die auf Balkonen von Gebäuden für Sicherheit und Ästhetik eingesetzt werden. Mit verschiedenen Designoptionen passen sie zu jedem Architekturstil.',
+  'Bestand tegen weer en corrosie': 'Witterungs- und korrosionsbeständig',
+  'Diverse kleuren en ontwerpen': 'Verschiedene Farben und Designs',
+  'Volledig op maat gemaakt': 'Vollständig maßgefertigt',
+
+  /* ── Split: Tuin ── */
+  'Tuinbestrating laten aanleggen?': 'Gartenpflasterung verlegen lassen?',
+  'Tuinbestrating aanleggen is bij ons maatwerk van A tot Z. Van het uitgraven en opbouwen van de juiste onderlaag tot het leggen en voegen van keramische tegels of andere bestrating.': 'Gartenpflasterung ist bei uns Maßarbeit von A bis Z. Vom Ausheben und Aufbau des richtigen Untergrunds bis zum Verlegen und Verfugen von Keramikfliesen oder anderer Pflasterung.',
+  'Terras, oprit & tuinrenovatie': 'Terrasse, Einfahrt & Gartensanierung',
+  'Wij ontzorgen voor 110%': 'Wir kümmern uns zu 110%',
+  'Strak en duurzaam resultaat': 'Sauberes und dauerhaftes Ergebnis',
+
+  /* ── Split: Badkamer ── */
+  'Complete renovatie in 2\u20135 dagen': 'Komplette Renovierung in 2\u20135 Tagen',
+  'Wij renoveren je badkamer of toilet volledig in slechts 2\u20135 dagen, met minimaal breek- en sloopwerk. Van inloopdouche en vloer tot meubel, toilet en verlaagd plafond.': 'Wir renovieren Ihr Bad oder WC vollständig in nur 2\u20135 Tagen mit minimalen Abbrucharbeiten. Von der Dusche und dem Boden bis zu Möbeln, WC und Unterdecke.',
+  'Al 1.000+ badkamers vernieuwd': 'Bereits 1.000+ Bäder renoviert',
+  'Eigen montageteam': 'Eigenes Montageteam',
+  'Alles op maat naar uw wensen': 'Alles nach Ihren Wünschen maßgefertigt',
+
+  /* ── Split: Beton ── */
+  'Betonvloer storten in heel Nederland': 'Betonboden gießen in ganz den Niederlanden',
+  'Gespecialiseerd in betonvloer storten voor woningen, garages, aanbouwen en bedrijfshallen. Jarenlange ervaring en een strakke, egale afwerking gegarandeerd.': 'Spezialisiert auf das Gießen von Betonböden für Häuser, Garagen, Anbauten und Gewerbehallen. Jahrelange Erfahrung und eine saubere, ebene Oberfläche garantiert.',
+  'Woningen, garages & bedrijfshallen': 'Häuser, Garagen & Gewerbehallen',
+  'Jarenlange specialistische ervaring': 'Jahrelange Fachexpertise',
+  'Strakke en egale afwerking': 'Saubere und ebene Oberfläche',
+
+  /* ── CTA ── */
+  'Wij reageren binnen 24 uur en komen bij u langs voor een vrijblijvend adviesgesprek.': 'Wir antworten innerhalb von 24 Stunden und besuchen Sie für ein unverbindliches Beratungsgespräch.',
+
+  /* ── Footer ── */
+  'Uw betrouwbare kluspartner in Eindhoven. Van balkonleuningen tot betonvloeren.': 'Ihr zuverlässiger Handwerkspartner in Eindhoven. Von Balkongeländern bis Betonböden.',
+  'Leuning Eindhoven': 'Geländer Eindhoven',
+  'Tuinbestrating': 'Gartenpflasterung',
+  'Privacybeleid': 'Datenschutz',
+
+  /* ── Certs ── */
+  'Gecertificeerd': 'Zertifiziert',
+  'Veiligheid, gezondheid en milieu centraal op elke bouwplaats.': 'Sicherheit, Gesundheit und Umwelt stehen auf jeder Baustelle im Mittelpunkt.',
+  'Erkend leerbedrijf voor de volgende generatie vakmensen.': 'Anerkannter Ausbildungsbetrieb für die nächste Generation von Fachkräften.',
+  'Elektrotechnische werkzaamheden conform Nederlandse norm.': 'Elektrotechnische Arbeiten gemäß niederländischer Norm.',
+  'Erkend Installateur': 'Anerkannter Installateur',
+  'Gecertificeerd voor isolatie en duurzame installaties.': 'Zertifiziert für Isolierung und nachhaltige Installationen.'
 };
 
 const germanHtml = {
   'Alles onder een dak': 'Alles unter<br /><span>einem Dach</span>',
   'Aanbouw / Uitbouw': 'Anbau / <em>Erweiterung</em>',
-  'Vloeren PVC/Laminaat / Vloertegels': 'PVC/Laminat / <em>Bodenfliesen</em>'
+  'Vloeren PVC/Laminaat / Vloertegels': 'PVC/Laminat / <em>Bodenfliesen</em>',
+  'Klaar om uw project te starten?Vraag vandaag nog een gratis offerte aan.': 'Bereit, Ihr Projekt zu starten?<br /><em>Fordern Sie noch heute ein kostenloses Angebot an.</em>'
 };
 
 function normalizeText(value) {
