@@ -205,6 +205,70 @@ function addGermanButtons() {
 addGermanTranslations();
 addGermanButtons();
 
+/* DIENST SELECT TRANSLATIONS */
+const dienstOptions = {
+  nl: {
+    placeholder: 'Selecteer een dienst...',
+    options: [
+      'Aanbouw / Uitbouw',
+      'Veranda & Terassen',
+      'Vloeren PVC/Laminaat / Vloertegels',
+      'Aluminium Balkonleuningen',
+      'Tuinwerkzaamheden',
+      'Badkamer & Toilet Renovatie',
+      'Betonvloer Storten'
+    ]
+  },
+  en: {
+    placeholder: 'Select a service...',
+    options: [
+      'Extension / Home Addition',
+      'Veranda & Terraces',
+      'Floors PVC / Laminate / Tiles',
+      'Aluminium Balcony Railings',
+      'Garden Works',
+      'Bathroom & Toilet Renovation',
+      'Concrete Floor Pouring'
+    ]
+  },
+  tr: {
+    placeholder: 'Bir hizmet seçin...',
+    options: [
+      'Ek Yapı / Genişletme',
+      'Veranda & Teraslar',
+      'Zemin PVC / Laminat / Fayans',
+      'Alüminyum Balkon Korkulukları',
+      'Bahçe İşlemleri',
+      'Banyo & Tuvalet Renovasyonu',
+      'Beton Zemin Döküm'
+    ]
+  },
+  de: {
+    placeholder: 'Leistung auswählen...',
+    options: [
+      'Anbau / Erweiterung',
+      'Veranda & Terrassen',
+      'PVC- / Laminat- / Bodenfliesen',
+      'Aluminium-Balkongeländer',
+      'Gartenarbeiten',
+      'Bad- & Toilettenrenovierung',
+      'Betonboden gießen'
+    ]
+  }
+};
+
+function updateDienstSelect(lang) {
+  const sel = document.getElementById('dienstSelect');
+  if (!sel) return;
+  const t = dienstOptions[lang] || dienstOptions['nl'];
+  const current = sel.value;
+  const currentIndex = Array.from(sel.options).findIndex(o => o.value === current) - 1;
+  sel.options[0].text = t.placeholder;
+  t.options.forEach((text, i) => {
+    if (sel.options[i + 1]) sel.options[i + 1].text = text;
+  });
+}
+
 function setLang(lang) {
   if (!supportedLangs.includes(lang)) lang = 'nl';
   currentLang = lang;
@@ -221,6 +285,7 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.switch === lang);
   });
+  updateDienstSelect(lang);
   document.documentElement.lang = lang;
   localStorage.setItem('argaklus-lang', lang);
 }
