@@ -385,26 +385,39 @@ if (form) {
 
     const data = new FormData(this);
 
-    fetch('/', {
+    fetch('mail.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       })
-      .then(() => {
-        msgBox.style.display = 'block';
-        msgBox.style.background = '#d1fae5';
-        msgBox.style.color = '#065f46';
-        msgBox.textContent = currentLang === 'de'
-          ? 'Vielen Dank. Ihre Anfrage wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
-          : 'Bedankt. Uw aanvraag is verzonden. Wij nemen zo snel mogelijk contact met u op.';
-        form.reset();
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        if (json.status === 'success') {
+          msgBox.style.display = 'block';
+          msgBox.style.background = '#d1fae5';
+          msgBox.style.color = '#065f46';
+          msgBox.textContent = currentLang === 'de'
+            ? 'Vielen Dank. Ihre Anfrage wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
+            : currentLang === 'en'
+            ? 'Thank you. Your request has been sent. We will contact you as soon as possible.'
+            : currentLang === 'tr'
+            ? 'Teşekkürler. Talebiniz gönderildi. En kısa sürede sizinle iletişime geçeceğiz.'
+            : 'Bedankt. Uw aanvraag is verzonden. Wij nemen zo snel mogelijk contact met u op.';
+          form.reset();
+        } else {
+          throw new Error(json.message || 'error');
+        }
       })
-      .catch(() => {
+      .catch(function() {
         msgBox.style.display = 'block';
         msgBox.style.background = '#fee2e2';
         msgBox.style.color = '#991b1b';
         msgBox.textContent = currentLang === 'de'
           ? 'Verbindungsfehler. Bitte versuchen Sie es später erneut oder schreiben Sie an info@argaklus.nl'
+          : currentLang === 'en'
+          ? 'Connection error. Please try again later or email info@argaklus.nl'
+          : currentLang === 'tr'
+          ? 'Bağlantı hatası. Lütfen daha sonra tekrar deneyin veya info@argaklus.nl adresine e-posta gönderin.'
           : 'Verbindingsfout. Probeer het later opnieuw of mail naar info@argaklus.nl';
       })
       .finally(() => {
