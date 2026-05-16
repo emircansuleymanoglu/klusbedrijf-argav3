@@ -21,6 +21,7 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; object-fit: cover; }
+picture { display: contents; }
 ul { list-style: none; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -162,7 +163,8 @@ option[data-lang].lang-active { display: block !important; }
 .img-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px; gap: 10px; border-radius: 18px; overflow: hidden; }
 .img-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .img-gallery img:hover { transform: scale(1.04); }
-.img-gallery img:first-child { grid-row: 1 / 3; }
+.img-gallery img:first-child,
+.img-gallery > picture:first-child img { grid-row: 1 / 3; }
 .img-single { border-radius: 18px; overflow: hidden; }
 .img-single img { width: 100%; height: 460px; object-fit: cover; }
 
