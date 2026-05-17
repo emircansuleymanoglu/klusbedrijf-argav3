@@ -454,6 +454,10 @@ if (form) {
 
     const data = new FormData(this);
 
+    // Bot koruması: timestamp token
+    const _ts = Math.floor((window._argaPageLoad || Date.now()) / 1000);
+    data.append('_token', String(_ts));
+
     fetch('mail.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

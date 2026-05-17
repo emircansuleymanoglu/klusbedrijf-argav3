@@ -8,6 +8,38 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// Honeypot: botlar bu gizli alani doldurur
+if (!empty($_POST['website'])) {
+    http_response_code(200);
+    echo json_encode(['status' => 'success']);
+    exit;
+}
+
+// JS Token kontrolu: token = epoch saniyesi (sayfa yuklenme zamani)
+$token = trim($_POST['_token'] ?? '');
+$ts    = intval($token);
+// Zaman kontrolu: formun en az 3 saniye acik kalmasi lazim
+if ($ts === 0 || (time() - $ts) < 3 || (time() - $ts) > 3600) {
+    http_response_code(200);
+    echo json_encode(['status' => 'success']);
+    exit;
+}
+
+// Rate limiting: ayni IP'den 60 saniyede max 3 istek
+$ip       = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$rateFile = sys_get_temp_dir() . '/argaklus_' . md5($ip) . '.json';
+$now      = time();
+$reqs     = file_exists($rateFile) ? (json_decode(file_get_contents($rateFile), true) ?? []) : [];
+$reqs     = array_values(array_filter($reqs, fn($t) => ($now - $t) < 60));
+if (count($reqs) >= 3) {
+    http_response_code(429);
+    echo json_encode(['status' => 'error', 'message' => 'Te veel verzoeken']);
+    exit;
+}
+$reqs[] = $now;
+file_put_contents($rateFile, json_encode($reqs));
+
+
 $voornaam   = htmlspecialchars(trim($_POST['voornaam']   ?? ''), ENT_QUOTES, 'UTF-8');
 $achternaam = htmlspecialchars(trim($_POST['achternaam'] ?? ''), ENT_QUOTES, 'UTF-8');
 $telefoon   = htmlspecialchars(trim($_POST['telefoon']   ?? ''), ENT_QUOTES, 'UTF-8');
@@ -110,7 +142,7 @@ $html = <<<HTML
         <!-- CTA -->
         <tr>
           <td style="padding:0 40px 40px;text-align:center;">
-            <a href="mailto:{$email}" style="display:inline-block;background:#f59e0b;color:#1a1a2e;font-size:15px;font-weight:700;padding:14px 36px;border-radius:8px;text-decoration:none;">
+            <a href="mailto:{$email}?subject=Re%3A%20Offerte%20aanvraag%20-%20ARGA%20Klusbedrijf&body=Geachte%20{$voornaam}%2C%0A%0ABedankt%20voor%20uw%20offerte%20aanvraag.%0A%0A%5BVul%20hier%20uw%20antwoord%20in%5D%0A%0AMet%20vriendelijke%20groet%2C%0AARGA%20Klusbedrijf%0AHudsonlaan%20220%2C%205623%20NG%20Eindhoven%0ATel%3A%20%2B31%206%2041%2017%2002%2008%0Ainfo%40argaklus.nl" style="display:inline-block;background:#f59e0b;color:#1a1a2e;font-size:15px;font-weight:700;padding:14px 36px;border-radius:8px;text-decoration:none;">
               Beantwoord deze aanvraag &rarr;
             </a>
           </td>
