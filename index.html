@@ -6,8 +6,10 @@
   <title>Argaklus – Klusbedrijf Eindhoven</title>
   <meta name="description" content="Argaklus – Professioneel klusbedrijf in Eindhoven. Aluminium balkonleuningen, tuinbestrating, badkamerrenovatie en betonvloeren." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="style.css?v=14" />
   <style>
     /* INDEX-ONLY STYLES */
     .services { padding: 80px 0; background: var(--white); }
@@ -31,6 +33,8 @@
     .split-content p { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 14px; }
     @media(max-width:960px){ .split-inner { grid-template-columns:1fr; gap:36px; } .split-inner.reverse { direction:ltr; } }
   </style>
+<link rel="preload" as="image" href="img/karisik/kar-1.webp" type="image/webp" fetchpriority="high" />
+<link rel="icon" href="img/logo.svg" type="image/svg+xml" /><link rel="icon" href="img/logo.png" type="image/png" />
 </head>
 <body>
 
@@ -39,7 +43,7 @@
   <div class="container">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
-        <img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" />
+        <img src="img/logo.png" alt="ARGA klusbedrijf" width="140" height="42">
       </a>
       <ul class="navbar__menu">
         <li>
@@ -93,6 +97,13 @@
               <span data-lang="nl" class="lang-active">Aanbouw en Uitbouw</span>
               <span data-lang="en">Extension Information</span>
               <span data-lang="tr">Ek Yapi Bilgisi</span>
+              <span data-lang="de">Anbau Information</span>
+            </a>
+            <a href="veranda-terassen.html#info">
+              <span data-lang="nl" class="lang-active">Veranda Eindhoven</span>
+              <span data-lang="en">Veranda Eindhoven</span>
+              <span data-lang="tr">Veranda Eindhoven</span>
+              <span data-lang="de">Veranda Eindhoven</span>
             </a>
             <a href="vloeren-pvc-laminaat-vloertegels.html#info">
               <span data-lang="nl" class="lang-active">Vloeren en Vloertegels</span>
@@ -237,12 +248,12 @@
         </div>
       </div>
       <div class="hero__slideshow" id="heroSlideshow" aria-hidden="true">
-        <img src="img/karisik/kar-1.jpg" alt="" class="active" />
-        <img src="img/karisik/kar-2.jpg" alt="" />
-        <img src="img/karisik/kar-3.jpg" alt="" />
-        <img src="img/karisik/kar-4.jpg" alt="" />
-        <img src="img/karisik/kar-5.jpg" alt="" />
-        <img src="img/karisik/kar-6.jpg" alt="" />
+        <picture><source srcset="img/karisik/kar-1.webp" type="image/webp"><img src="img/karisik/kar-1.jpg" alt="" class="active" width="1080" height="1089" fetchpriority="high" data-full-webp="img/karisik/kar-1.webp"></picture>
+        <picture><source srcset="img/karisik/kar-2.webp" type="image/webp"><img src="img/karisik/kar-2.jpg" alt="" width="1080" height="1339" data-full-webp="img/karisik/kar-2.webp"></picture>
+        <picture><source srcset="img/karisik/kar-3.webp" type="image/webp"><img src="img/karisik/kar-3.jpg" alt="" width="1080" height="1353" data-full-webp="img/karisik/kar-3.webp"></picture>
+        <picture><source srcset="img/karisik/kar-4.webp" type="image/webp"><img src="img/karisik/kar-4.jpg" alt="" width="1080" height="1369" data-full-webp="img/karisik/kar-4.webp"></picture>
+        <picture><source srcset="img/karisik/kar-5.webp" type="image/webp"><img src="img/karisik/kar-5.jpg" alt="" width="1080" height="1076" data-full-webp="img/karisik/kar-5.webp"></picture>
+        <picture><source srcset="img/karisik/kar-6.webp" type="image/webp"><img src="img/karisik/kar-6.jpg" alt="" width="1080" height="1397" data-full-webp="img/karisik/kar-6.webp"></picture>
       </div>
     </div>
   </div>
@@ -272,6 +283,12 @@
         <h3 data-lang="nl" class="lang-active">Aanbouw / Uitbouw</h3><h3 data-lang="en">Extension / Home Addition</h3><h3 data-lang="tr">Ek Yapi / Genisletme</h3>
         <p data-lang="nl" class="lang-active">Meer leefruimte met een aanbouw, uitbouw of bijgebouw op maat.</p><p data-lang="en">More living space with a custom extension, addition or outbuilding.</p><p data-lang="tr">Ozel ek yapi, genisletme veya bagimsiz yapi ile daha fazla yasam alani.</p>
         <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen -></span><span data-lang="en">Read more -></span><span data-lang="tr">Devamini oku -></span></div>
+      </a>
+      <a href="veranda-terassen.html" class="service-card">
+        <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div>
+        <h3 data-lang="nl" class="lang-active">Veranda &amp; Terassen</h3><h3 data-lang="en">Veranda &amp; Terraces</h3><h3 data-lang="tr">Veranda &amp; Teraslar</h3><h3 data-lang="de">Veranda &amp; Terrassen</h3>
+        <p data-lang="nl" class="lang-active">Aluminium veranda's, glazen schuifwanden en keramische terassen op maat.</p><p data-lang="en">Aluminium verandas, glass sliding walls and custom ceramic terraces.</p><p data-lang="tr">Alüminyum verandalar, cam kayar duvarlar ve özel seramik teraslar.</p><p data-lang="de">Aluminium-Veranden, Glasschiebewände und maßgefertigte Keramikterrassen.</p>
+        <div class="service-card__arrow"><span data-lang="nl" class="lang-active">Meer lezen →</span><span data-lang="en">Read more →</span><span data-lang="tr">Devamını oku →</span><span data-lang="de">Mehr erfahren →</span></div>
       </a>
       <a href="vloeren-pvc-laminaat-vloertegels.html" class="service-card">
         <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/><path d="M15 21V9"/></svg></div>
@@ -312,7 +329,7 @@
   <div class="container">
     <div class="overlay-grid">
       <a class="overlay-card" href="aanbouw-uitbouw.html">
-        <img src="img/aanbouw-uitbouw.jpg?v=4" alt="Aanbouw en uitbouw project van Argaklus" />
+        <picture><source srcset="img/aanbouw-uitbouw.webp" type="image/webp"><img src="img/aanbouw-uitbouw.jpg?v=4" alt="Aanbouw en uitbouw project van Argaklus" width="1068" height="504" loading="lazy" data-full-webp="img/aanbouw-uitbouw.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Nieuwe dienst</span><span data-lang="en">New service</span><span data-lang="tr">Yeni hizmet</span><span data-lang="de">Neuer Service</span></p>
           <h2><span data-lang="nl" class="lang-active">Aanbouw / Uitbouw</span><span data-lang="en">Extension / Home Addition</span><span data-lang="tr">Ek Yapı / Genişletme</span><span data-lang="de">Anbau / Erweiterung</span></h2>
@@ -320,7 +337,7 @@
         </div>
       </a>
       <a class="overlay-card" href="veranda-terassen.html">
-        <img src="img/veranda/veranda-1.jpg" alt="Veranda en terassen Eindhoven" />
+        <picture><source srcset="img/veranda/veranda-2.webp" type="image/webp"><img src="img/veranda/veranda-2.jpg" alt="Veranda en terassen Eindhoven" width="720" height="540" loading="lazy" data-full-webp="img/veranda/veranda-2.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Nieuwe dienst</span><span data-lang="en">New service</span><span data-lang="tr">Yeni hizmet</span><span data-lang="de">Neuer Service</span></p>
           <h2><span data-lang="nl" class="lang-active">Veranda &amp; Terassen</span><span data-lang="en">Veranda &amp; Terraces</span><span data-lang="tr">Veranda &amp; Teraslar</span><span data-lang="de">Veranda &amp; Terrassen</span></h2>
@@ -328,7 +345,7 @@
         </div>
       </a>
       <a class="overlay-card" href="vloeren-pvc-laminaat-vloertegels.html">
-        <img src="img/vloeren/vloer-1.jpg" alt="PVC, laminaat en vloertegels" />
+        <picture><source srcset="img/vloeren/vloer-1.webp" type="image/webp"><img src="img/vloeren/vloer-1.jpg" alt="PVC, laminaat en vloertegels" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-1.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Nieuwe dienst</span><span data-lang="en">New service</span><span data-lang="tr">Yeni hizmet</span></p>
           <h2><span data-lang="nl" class="lang-active">Vloeren PVC/Laminaat / Vloertegels</span><span data-lang="en">Floors PVC/Laminate / Floor Tiles</span><span data-lang="tr">Zemin PVC/Laminat / Yer Karosu</span></h2>
@@ -336,7 +353,7 @@
         </div>
       </a>
       <a class="overlay-card" href="aluminium-balkonleuningen.html">
-        <img src="img/aluminium/al-1.jpg" alt="Aluminium balkonleuningen" />
+        <picture><source srcset="img/aluminium/al-1.webp" type="image/webp"><img src="img/aluminium/al-1.jpg" alt="Aluminium balkonleuningen" width="1152" height="2048" loading="lazy" data-full-webp="img/aluminium/al-1.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Dienst</span><span data-lang="en">Service</span><span data-lang="tr">Hizmet</span></p>
           <h2><span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span><span data-lang="en">Aluminium Balcony Railings</span><span data-lang="tr">Alüminyum Balkon Korkulukları</span></h2>
@@ -344,7 +361,7 @@
         </div>
       </a>
       <a class="overlay-card" href="tuinwerkzaamheden.html">
-        <img src="img/bahce/bahce-1.jpg" alt="Tuinwerkzaamheden en bestrating" />
+        <picture><source srcset="img/bahce/bahce-1.webp" type="image/webp"><img src="img/bahce/bahce-1.jpg" alt="Tuinwerkzaamheden en bestrating" width="1600" height="1200" loading="lazy" data-full-webp="img/bahce/bahce-1.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Dienst</span><span data-lang="en">Service</span><span data-lang="tr">Hizmet</span></p>
           <h2><span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span><span data-lang="en">Garden Works</span><span data-lang="tr">Bahçe İşlemleri</span></h2>
@@ -352,7 +369,7 @@
         </div>
       </a>
       <a class="overlay-card" href="badkamer-renovatie.html">
-        <img src="img/badkamer/bdk-1.jpg" alt="Badkamer en toilet renovatie" />
+        <picture><source srcset="img/badkamer/bdk-1.webp" type="image/webp"><img src="img/badkamer/bdk-1.jpg" alt="Badkamer en toilet renovatie" width="805" height="1259" loading="lazy" data-full-webp="img/badkamer/bdk-1.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Dienst</span><span data-lang="en">Service</span><span data-lang="tr">Hizmet</span></p>
           <h2><span data-lang="nl" class="lang-active">Badkamer &amp; Toilet Renovatie</span><span data-lang="en">Bathroom &amp; Toilet Renovation</span><span data-lang="tr">Banyo &amp; Tuvalet Yenileme</span></h2>
@@ -360,7 +377,7 @@
         </div>
       </a>
       <a class="overlay-card" href="betonvloer-storten.html">
-        <img src="img/beton/beton-1.jpg" alt="Betonvloer storten" />
+        <picture><source srcset="img/beton/beton-1.webp" type="image/webp"><img src="img/beton/beton-1.jpg" alt="Betonvloer storten" width="1536" height="2048" loading="lazy" data-full-webp="img/beton/beton-1.webp"></picture>
         <div class="overlay-card__content">
           <p class="overlay-card__label"><span data-lang="nl" class="lang-active">Dienst</span><span data-lang="en">Service</span><span data-lang="tr">Hizmet</span></p>
           <h2><span data-lang="nl" class="lang-active">Betonvloer Storten</span><span data-lang="en">Concrete Floor Pouring</span><span data-lang="tr">Beton Zemin Döküm</span></h2>
@@ -376,9 +393,9 @@
   <div class="container">
     <div class="split-inner">
       <div class="img-gallery">
-        <img src="img/aluminium/al-1.jpg" alt="Balkonleuning" />
-        <img src="img/aluminium/al-2.jpg" alt="Balkonleuning" />
-        <img src="img/aluminium/al-3.jpg" alt="Balkonleuning" />
+        <picture><source srcset="img/aluminium/al-1.webp" type="image/webp"><img src="img/aluminium/al-1.jpg" alt="Balkonleuning" width="1152" height="2048" loading="lazy" data-full-webp="img/aluminium/al-1.webp"></picture>
+        <picture><source srcset="img/aluminium/al-2.webp" type="image/webp"><img src="img/aluminium/al-2.jpg" alt="Balkonleuning" width="1080" height="1920" loading="lazy" data-full-webp="img/aluminium/al-2.webp"></picture>
+        <picture><source srcset="img/aluminium/al-3.webp" type="image/webp"><img src="img/aluminium/al-3.jpg" alt="Balkonleuning" width="1080" height="1920" loading="lazy" data-full-webp="img/aluminium/al-3.webp"></picture>
       </div>
       <div class="split-content">
         <div class="tag"><span data-lang="nl" class="lang-active">Aluminium Balkonleuningen</span><span data-lang="en">Aluminium Railings</span><span data-lang="tr">Balkon Korkulukları</span></div>
@@ -402,9 +419,9 @@
   <div class="container">
     <div class="split-inner reverse">
       <div class="img-gallery">
-        <img src="img/bahce/bahce-1.jpg" alt="Tuinbestrating" />
-        <img src="img/bahce/bahce-2.jpg" alt="Tuinbestrating" />
-        <img src="img/bahce/bahce-3.jpg" alt="Tuinbestrating" />
+        <picture><source srcset="img/bahce/bahce-1.webp" type="image/webp"><img src="img/bahce/bahce-1.jpg" alt="Tuinbestrating" width="1600" height="1200" loading="lazy" data-full-webp="img/bahce/bahce-1.webp"></picture>
+        <picture><source srcset="img/bahce/bahce-2.webp" type="image/webp"><img src="img/bahce/bahce-2.jpg" alt="Tuinbestrating" width="1600" height="747" loading="lazy" data-full-webp="img/bahce/bahce-2.webp"></picture>
+        <picture><source srcset="img/bahce/bahce-3.webp" type="image/webp"><img src="img/bahce/bahce-3.jpg" alt="Tuinbestrating" width="1152" height="2048" loading="lazy" data-full-webp="img/bahce/bahce-3.webp"></picture>
       </div>
       <div class="split-content">
         <div class="tag"><span data-lang="nl" class="lang-active">Tuinwerkzaamheden</span><span data-lang="en">Garden Works</span><span data-lang="tr">Bahçe İşlemleri</span></div>
@@ -428,9 +445,9 @@
   <div class="container">
     <div class="split-inner">
       <div class="img-gallery">
-        <img src="img/badkamer/bdk-1.jpg" alt="Badkamer" />
-        <img src="img/badkamer/bdk-2.jpg" alt="Badkamer" />
-        <img src="img/badkamer/bdk-3.jpg" alt="Badkamer" />
+        <picture><source srcset="img/badkamer/bdk-1.webp" type="image/webp"><img src="img/badkamer/bdk-1.jpg" alt="Badkamer" width="805" height="1259" loading="lazy" data-full-webp="img/badkamer/bdk-1.webp"></picture>
+        <picture><source srcset="img/badkamer/bdk-2.webp" type="image/webp"><img src="img/badkamer/bdk-2.jpg" alt="Badkamer" width="928" height="1414" loading="lazy" data-full-webp="img/badkamer/bdk-2.webp"></picture>
+        <picture><source srcset="img/badkamer/bdk-3.webp" type="image/webp"><img src="img/badkamer/bdk-3.jpg" alt="Badkamer" width="1080" height="1270" loading="lazy" data-full-webp="img/badkamer/bdk-3.webp"></picture>
       </div>
       <div class="split-content">
         <div class="tag"><span data-lang="nl" class="lang-active">Badkamer &amp; Toilet</span><span data-lang="en">Bathroom &amp; Toilet</span><span data-lang="tr">Banyo &amp; Tuvalet</span></div>
@@ -454,9 +471,9 @@
   <div class="container">
     <div class="split-inner reverse">
       <div class="img-gallery">
-        <img src="img/beton/beton-1.jpg" alt="Betonvloer" />
-        <img src="img/beton/beton-2.jpg" alt="Betonvloer" />
-        <img src="img/beton/beton-3.jpg" alt="Betonvloer" />
+        <picture><source srcset="img/beton/beton-1.webp" type="image/webp"><img src="img/beton/beton-1.jpg" alt="Betonvloer" width="1536" height="2048" loading="lazy" data-full-webp="img/beton/beton-1.webp"></picture>
+        <picture><source srcset="img/beton/beton-2.webp" type="image/webp"><img src="img/beton/beton-2.jpg" alt="Betonvloer" width="1536" height="2048" loading="lazy" data-full-webp="img/beton/beton-2.webp"></picture>
+        <picture><source srcset="img/beton/beton-3.webp" type="image/webp"><img src="img/beton/beton-3.jpg" alt="Betonvloer" width="1049" height="873" loading="lazy" data-full-webp="img/beton/beton-3.webp"></picture>
       </div>
       <div class="split-content">
         <div class="tag"><span data-lang="nl" class="lang-active">Betonvloer Storten</span><span data-lang="en">Concrete Floors</span><span data-lang="tr">Beton Zemin Döküm</span></div>
@@ -470,6 +487,60 @@
           <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Strakke en egale afwerking</span><span data-lang="en">Neat and even finish</span><span data-lang="tr">Düzgün ve eşit yüzey</span></li>
         </ul>
         <a href="betonvloer-storten.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie →</span><span data-lang="en">More information →</span><span data-lang="tr">Daha fazla bilgi →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: VERANDA -->
+<section class="section-split alt">
+  <div class="container">
+    <div class="split-inner">
+      <div class="img-gallery">
+        <picture><source srcset="img/veranda/veranda-2.webp" type="image/webp"><img src="img/veranda/veranda-2.jpg" alt="Veranda Eindhoven" width="720" height="540" loading="lazy" data-full-webp="img/veranda/veranda-2.webp"></picture>
+        <picture><source srcset="img/veranda/veranda-2.webp" type="image/webp"><img src="img/veranda/veranda-2.jpg" alt="Terras op maat" width="720" height="540" loading="lazy" data-full-webp="img/veranda/veranda-2.webp"></picture>
+        <picture><source srcset="img/veranda/veranda-3.webp" type="image/webp"><img src="img/veranda/veranda-3.jpg" alt="Veranda plaatsen" width="1080" height="1020" loading="lazy" data-full-webp="img/veranda/veranda-3.webp"></picture>
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Veranda &amp; Terassen</span><span data-lang="en">Veranda &amp; Terraces</span><span data-lang="tr">Veranda &amp; Teraslar</span><span data-lang="de">Veranda &amp; Terrassen</span></div>
+        <h2 data-lang="nl" class="lang-active">Uw ideale buitenruimte, op maat gemaakt</h2><h2 data-lang="en">Your ideal outdoor space, custom made</h2><h2 data-lang="tr">İdeal dış mekanınız, özel yapım</h2><h2 data-lang="de">Ihr idealer Außenbereich, maßgefertigt</h2>
+        <p data-lang="nl" class="lang-active">Van een stijlvolle veranda tot een ruim terras – wij ontwerpen en bouwen uw buitenruimte volledig naar wens. Duurzame materialen, vakkundige montage en een mooi eindresultaat gegarandeerd.</p>
+        <p data-lang="en">From a stylish veranda to a spacious terrace – we design and build your outdoor space entirely to your wishes. Durable materials, professional installation and a beautiful end result guaranteed.</p>
+        <p data-lang="tr">Şık bir verandadan geniş bir terasa kadar – dış mekanınızı tamamen isteklerinize göre tasarlayıp inşa ediyoruz. Dayanıklı malzeme, profesyonel montaj ve güzel sonuç garantisi.</p>
+        <p data-lang="de">Von einer stilvollen Veranda bis zur geräumigen Terrasse – wir planen und bauen Ihren Außenbereich ganz nach Wunsch. Langlebige Materialien, fachgerechte Montage und ein schönes Ergebnis garantiert.</p>
+        <ul class="feature-list">
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Volledig op maat ontworpen</span><span data-lang="en">Fully custom designed</span><span data-lang="tr">Tamamen özel tasarım</span><span data-lang="de">Vollständig nach Maß entworfen</span></li>
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Duurzame materialen</span><span data-lang="en">Durable materials</span><span data-lang="tr">Dayanıklı malzemeler</span><span data-lang="de">Langlebige Materialien</span></li>
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Snelle en nette oplevering</span><span data-lang="en">Fast and clean delivery</span><span data-lang="tr">Hızlı ve temiz teslim</span><span data-lang="de">Schnelle und saubere Fertigstellung</span></li>
+        </ul>
+        <a href="veranda-terassen.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie →</span><span data-lang="en">More information →</span><span data-lang="tr">Daha fazla bilgi →</span><span data-lang="de">Mehr Informationen →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: VLOEREN -->
+<section class="section-split">
+  <div class="container">
+    <div class="split-inner reverse">
+      <div class="img-gallery">
+        <picture><source srcset="img/vloeren/vloer-1.webp" type="image/webp"><img src="img/vloeren/vloer-1.jpg" alt="PVC vloer" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-1.webp"></picture>
+        <picture><source srcset="img/vloeren/vloer-2.webp" type="image/webp"><img src="img/vloeren/vloer-2.jpg" alt="Laminaat vloer" width="1077" height="1905" loading="lazy" data-full-webp="img/vloeren/vloer-2.webp"></picture>
+        <picture><source srcset="img/vloeren/vloer-3.webp" type="image/webp"><img src="img/vloeren/vloer-3.jpg" alt="Vloertegels" width="1073" height="1423" loading="lazy" data-full-webp="img/vloeren/vloer-3.webp"></picture>
+      </div>
+      <div class="split-content">
+        <div class="tag"><span data-lang="nl" class="lang-active">Vloeren PVC / Laminaat / Tegels</span><span data-lang="en">Floors PVC / Laminate / Tiles</span><span data-lang="tr">Zemin PVC / Laminat / Fayans</span><span data-lang="de">Böden PVC / Laminat / Fliesen</span></div>
+        <h2 data-lang="nl" class="lang-active">De perfecte vloer voor elke ruimte</h2><h2 data-lang="en">The perfect floor for every room</h2><h2 data-lang="tr">Her oda için mükemmel zemin</h2><h2 data-lang="de">Der perfekte Boden für jeden Raum</h2>
+        <p data-lang="nl" class="lang-active">Wij leggen PVC, laminaat en vloertegels in uw woning of bedrijfspand. Strak werk, snelle oplevering en keuze uit een breed assortiment materialen voor elk budget en smaak.</p>
+        <p data-lang="en">We install PVC, laminate and floor tiles in your home or business premises. Neat work, fast delivery and a wide range of materials for every budget and taste.</p>
+        <p data-lang="tr">Evinize veya iş yerinize PVC, laminat ve yer fayansı döşüyoruz. Düzgün işçilik, hızlı teslim ve her bütçeye uygun geniş malzeme yelpazesi.</p>
+        <p data-lang="de">Wir verlegen PVC, Laminat und Bodenfliesen in Ihrem Wohn- oder Geschäftsgebäude. Saubere Arbeit, schnelle Fertigstellung und eine breite Auswahl an Materialien für jedes Budget.</p>
+        <ul class="feature-list">
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">PVC, laminaat en vloertegels</span><span data-lang="en">PVC, laminate and floor tiles</span><span data-lang="tr">PVC, laminat ve yer fayansı</span><span data-lang="de">PVC, Laminat und Bodenfliesen</span></li>
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Geschikt voor iedere ondergrond</span><span data-lang="en">Suitable for every surface</span><span data-lang="tr">Her zemin için uygun</span><span data-lang="de">Für jeden Untergrund geeignet</span></li>
+          <li><div class="check">✓</div><span data-lang="nl" class="lang-active">Snel en stofvrij geplaatst</span><span data-lang="en">Installed quickly and dust-free</span><span data-lang="tr">Hızlı ve tozsuz montaj</span><span data-lang="de">Schnell und staubfrei verlegt</span></li>
+        </ul>
+        <a href="vloeren-pvc-laminaat-vloertegels.html" class="btn btn-primary"><span data-lang="nl" class="lang-active">Meer informatie →</span><span data-lang="en">More information →</span><span data-lang="tr">Daha fazla bilgi →</span><span data-lang="de">Mehr Informationen →</span></a>
       </div>
     </div>
   </div>
@@ -517,9 +588,10 @@
           <div class="form-group"><label>E-mail</label><input type="email" name="email" placeholder="jan@voorbeeld.nl" required /></div>
           <div class="form-group">
             <label data-lang="nl" class="lang-active">Dienst</label><label data-lang="en">Service</label><label data-lang="tr">Hizmet</label>
-            <select name="dienst">
+            <select name="dienst" id="dienstSelect">
               <option value="">Selecteer een dienst...</option>
               <option value="Aanbouw / Uitbouw">Aanbouw / Uitbouw</option>
+              <option value="Veranda &amp; Terassen">Veranda &amp; Terassen</option>
               <option value="Vloeren PVC/Laminaat / Vloertegels">Vloeren PVC/Laminaat / Vloertegels</option>
               <option value="Aluminium Balkonleuningen">Aluminium Balkonleuningen</option>
               <option value="Tuinwerkzaamheden">Tuinwerkzaamheden</option>
@@ -555,7 +627,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <div class="f-logo"><img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" /></div>
+        <div class="f-logo"><img src="img/logo.png" alt="ARGA klusbedrijf" width="140" height="42"></div>
         <p data-lang="nl" class="lang-active">Uw betrouwbare kluspartner in Eindhoven. Van balkonleuningen tot betonvloeren.</p><p data-lang="en">Your reliable partner in Eindhoven. From balcony railings to concrete floors.</p><p data-lang="tr">Eindhoven'da güvenilir iş ortağınız. Balkon korkuluklarından beton zeminlere.</p>
         <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>Hudsonlaan 220, 5623 NG Eindhoven</div>
         <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>+31 6 41 17 02 08</div>
@@ -600,7 +672,7 @@
       </a>
     </div>
     <div class="footer__bottom">
-      <span>© 2024 Argaklus Klusbedrijf Eindhoven</span>
+      <span>© 2026 Argaklus Klusbedrijf Eindhoven</span>
       <div class="footer__biz"><a href="#"><span data-lang="nl" class="lang-active">Privacybeleid</span><span data-lang="en">Privacy</span><span data-lang="tr">Gizlilik</span></a></div>
     </div>
   </div>
@@ -616,6 +688,7 @@
   <button class="lang-btn" data-switch="tr" aria-label="Turkce"><span class="flag-icon"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#e30a17"/><circle cx="12" cy="10" r="5.4" fill="#fff"/><circle cx="13.6" cy="10" r="4.3" fill="#e30a17"/><path fill="#fff" d="m20.2 10 4.7-1.5-2.9 4V7.5l2.9 4z"/></svg></span><span class="lang-label">Turkce</span></button>
 </div>
 
-<script src="app.js?v=13"></script>
+<script>window._argaPageLoad=Date.now();</script>
+<script src="app.js?v=14" defer></script>
 </body>
 </html>

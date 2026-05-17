@@ -6,8 +6,10 @@
   <title>Vloeren PVC/Laminaat / Vloertegels - Argaklus</title>
   <meta name="description" content="PVC vloeren, laminaat en vloertegels laten plaatsen door Argaklus. Strakke vloerafwerking voor woning en bedrijfsruimte." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="style.css?v=14" />
   <style>
     .detail-hero{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;padding:62px 0 50px;position:relative;overflow:hidden}
     .detail-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/svg%3E")}
@@ -25,11 +27,12 @@
     .visgraat-card p:last-child{margin-bottom:0}
     @media(max-width:960px){.detail-hero__inner{grid-template-columns:1fr}.detail-hero__img{height:230px}}
   </style>
+<link rel="icon" href="img/logo.svg" type="image/svg+xml" /><link rel="icon" href="img/logo.png" type="image/png" />
 </head>
 <body>
 <nav class="navbar">
   <div class="container"><div class="navbar__inner">
-    <a href="index.html" class="navbar__logo"><img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" /></a>
+    <a href="index.html" class="navbar__logo"><img src="img/logo.png" alt="ARGA klusbedrijf" width="140" height="42"></a>
     <ul class="navbar__menu">
       <li><a href="index.html#diensten">Diensten &#9662;</a><div class="dropdown">
         <a href="aanbouw-uitbouw.html">Aanbouw / Uitbouw</a>
@@ -40,7 +43,16 @@
         <a href="badkamer-renovatie.html">Badkamer &amp; Toilet Renovatie</a>
         <a href="betonvloer-storten.html">Betonvloer Storten</a>
       </div></li>
-      <li><a href="#info">Informatie</a></li>
+      <li><a href="#"><span data-lang="nl" class="lang-active">Informatie &#9662;</span><span data-lang="en">Information &#9662;</span><span data-lang="tr">Bilgi &#9662;</span><span data-lang="de">Information &#9662;</span></a>
+<div class="dropdown">
+<a href="aanbouw-uitbouw.html#info"><span data-lang="nl" class="lang-active">Aanbouw en Uitbouw</span><span data-lang="en">Extension Information</span><span data-lang="tr">Ek Yapı Bilgisi</span><span data-lang="de">Anbau Information</span></a>
+<a href="veranda-terassen.html#info"><span data-lang="nl" class="lang-active">Veranda Eindhoven</span><span data-lang="en">Veranda Eindhoven</span><span data-lang="tr">Veranda Eindhoven</span><span data-lang="de">Veranda Eindhoven</span></a>
+<a href="vloeren-pvc-laminaat-vloertegels.html#info"><span data-lang="nl" class="lang-active">Vloeren en Vloertegels</span><span data-lang="en">Floors and Tiles</span><span data-lang="tr">Zemin ve Yer Karosu</span><span data-lang="de">Böden und Fliesen</span></a>
+<a href="aluminium-balkonleuningen.html#info"><span data-lang="nl" class="lang-active">Aluminium Leuning Eindhoven</span><span data-lang="en">Aluminium Railing Eindhoven</span><span data-lang="tr">Alüminyum Korkuluk Eindhoven</span><span data-lang="de">Aluminiumgeländer Eindhoven</span></a>
+<a href="tuinwerkzaamheden.html#info"><span data-lang="nl" class="lang-active">Tuinbestrating Eindhoven</span><span data-lang="en">Garden Paving Eindhoven</span><span data-lang="tr">Bahçe Döşeme Eindhoven</span><span data-lang="de">Gartengestaltung Eindhoven</span></a>
+<a href="badkamer-renovatie.html#info"><span data-lang="nl" class="lang-active">Badkamer Renovatie Eindhoven</span><span data-lang="en">Bathroom Renovation Eindhoven</span><span data-lang="tr">Banyo Yenileme Eindhoven</span><span data-lang="de">Badrenovierung Eindhoven</span></a>
+<a href="betonvloer-storten.html#info"><span data-lang="nl" class="lang-active">Betonvloer Eindhoven</span><span data-lang="en">Concrete Floor Eindhoven</span><span data-lang="tr">Beton Zemin Eindhoven</span><span data-lang="de">Betonboden Eindhoven</span></a>
+</div></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="navbar__right"><a href="#contact" class="btn btn-primary">Gratis Offerte</a><button class="navbar__burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button></div>
@@ -68,7 +80,7 @@
       <p>Een strakke vloerafwerking voor woonkamer, keuken, badkamer, hal of bedrijfsruimte.</p>
       <div class="hero__buttons"><a href="#contact" class="btn btn-white">Gratis Offerte</a><a href="#info" class="btn btn-ghost">Meer info</a></div>
     </div>
-    <div class="detail-hero__img"><img src="img/vloeren/vloer-1.jpg" alt="Vloeren PVC laminaat en vloertegels" /></div>
+    <div class="detail-hero__img"><picture><source srcset="img/vloeren/vloer-1.webp" type="image/webp"><img src="img/vloeren/vloer-1.jpg" alt="Vloeren PVC laminaat en vloertegels" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-1.webp"></picture></div>
   </div></div>
 </section>
 
@@ -76,9 +88,9 @@
   <div class="container">
     <div class="service-block__inner">
       <div class="img-gallery">
-        <img src="img/vloeren/vloer-1.jpg" alt="PVC vloer" />
-        <img src="img/vloeren/vloer-2.jpg" alt="Laminaat vloer" />
-        <img src="img/vloeren/vloer-3.jpg" alt="Vloertegels" />
+        <picture><source srcset="img/vloeren/vloer-1.webp" type="image/webp"><img src="img/vloeren/vloer-1.jpg" alt="PVC vloer" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-1.webp"></picture>
+        <picture><source srcset="img/vloeren/vloer-2.webp" type="image/webp"><img src="img/vloeren/vloer-2.jpg" alt="Laminaat vloer" width="1077" height="1905" loading="lazy" data-full-webp="img/vloeren/vloer-2.webp"></picture>
+        <picture><source srcset="img/vloeren/vloer-3.webp" type="image/webp"><img src="img/vloeren/vloer-3.jpg" alt="Vloertegels" width="1073" height="1423" loading="lazy" data-full-webp="img/vloeren/vloer-3.webp"></picture>
       </div>
       <div>
         <div class="tag">Vloeren</div>
@@ -113,23 +125,23 @@
     <div class="tag">Ons werk</div>
     <h2 class="section-title">Vloerprojecten</h2>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="img/vloeren/vloer-1.jpg?v=2" alt="PVC vloer" /><div class="gallery-overlay"><span>PVC vloer</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-2.jpg?v=2" alt="Laminaat" /><div class="gallery-overlay"><span>Laminaat</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-3.jpg?v=2" alt="Vloertegels" /><div class="gallery-overlay"><span>Vloertegels</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-4.jpg?v=2" alt="Vloerafwerking" /><div class="gallery-overlay"><span>Vloerafwerking</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-5.jpg?v=2" alt="Laminaat vloerafwerking" /><div class="gallery-overlay"><span>Laminaat vloerafwerking</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-6.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-7.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-8.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-9.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-10.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-11.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-12.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-13.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-14.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-15.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-16.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
-      <div class="gallery-item"><img src="img/vloeren/vloer-17.jpg?v=2" alt="PVC vloerproject" /><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-1.webp" type="image/webp"><img src="img/vloeren/vloer-1.jpg?v=2" alt="PVC vloer" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-1.webp"></picture><div class="gallery-overlay"><span>PVC vloer</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-2.webp" type="image/webp"><img src="img/vloeren/vloer-2.jpg?v=2" alt="Laminaat" width="1077" height="1905" loading="lazy" data-full-webp="img/vloeren/vloer-2.webp"></picture><div class="gallery-overlay"><span>Laminaat</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-3.webp" type="image/webp"><img src="img/vloeren/vloer-3.jpg?v=2" alt="Vloertegels" width="1073" height="1423" loading="lazy" data-full-webp="img/vloeren/vloer-3.webp"></picture><div class="gallery-overlay"><span>Vloertegels</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-4.webp" type="image/webp"><img src="img/vloeren/vloer-4.jpg?v=2" alt="Vloerafwerking" width="1500" height="2000" loading="lazy" data-full-webp="img/vloeren/vloer-4.webp"></picture><div class="gallery-overlay"><span>Vloerafwerking</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-5.webp" type="image/webp"><img src="img/vloeren/vloer-5.jpg?v=2" alt="Laminaat vloerafwerking" width="1080" height="1428" loading="lazy" data-full-webp="img/vloeren/vloer-5.webp"></picture><div class="gallery-overlay"><span>Laminaat vloerafwerking</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-6.webp" type="image/webp"><img src="img/vloeren/vloer-6.jpg?v=2" alt="PVC vloerproject" width="1440" height="1854" loading="lazy" data-full-webp="img/vloeren/vloer-6.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-7.webp" type="image/webp"><img src="img/vloeren/vloer-7.jpg?v=2" alt="PVC vloerproject" width="1440" height="1871" loading="lazy" data-full-webp="img/vloeren/vloer-7.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-8.webp" type="image/webp"><img src="img/vloeren/vloer-8.jpg?v=2" alt="PVC vloerproject" width="1440" height="1852" loading="lazy" data-full-webp="img/vloeren/vloer-8.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-9.webp" type="image/webp"><img src="img/vloeren/vloer-9.jpg?v=2" alt="PVC vloerproject" width="1440" height="1864" loading="lazy" data-full-webp="img/vloeren/vloer-9.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-10.webp" type="image/webp"><img src="img/vloeren/vloer-10.jpg?v=2" alt="PVC vloerproject" width="1303" height="873" loading="lazy" data-full-webp="img/vloeren/vloer-10.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-11.webp" type="image/webp"><img src="img/vloeren/vloer-11.jpg?v=2" alt="PVC vloerproject" width="1283" height="845" loading="lazy" data-full-webp="img/vloeren/vloer-11.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-12.webp" type="image/webp"><img src="img/vloeren/vloer-12.jpg?v=2" alt="PVC vloerproject" width="1273" height="1086" loading="lazy" data-full-webp="img/vloeren/vloer-12.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-13.webp" type="image/webp"><img src="img/vloeren/vloer-13.jpg?v=2" alt="PVC vloerproject" width="1440" height="1835" loading="lazy" data-full-webp="img/vloeren/vloer-13.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-14.webp" type="image/webp"><img src="img/vloeren/vloer-14.jpg?v=2" alt="PVC vloerproject" width="1295" height="977" loading="lazy" data-full-webp="img/vloeren/vloer-14.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-15.webp" type="image/webp"><img src="img/vloeren/vloer-15.jpg?v=2" alt="PVC vloerproject" width="1440" height="1848" loading="lazy" data-full-webp="img/vloeren/vloer-15.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-16.webp" type="image/webp"><img src="img/vloeren/vloer-16.jpg?v=2" alt="PVC vloerproject" width="1080" height="1920" loading="lazy" data-full-webp="img/vloeren/vloer-16.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
+      <div class="gallery-item"><picture><source srcset="img/vloeren/vloer-17.webp" type="image/webp"><img src="img/vloeren/vloer-17.jpg?v=2" alt="PVC vloerproject" width="900" height="1600" loading="lazy" data-full-webp="img/vloeren/vloer-17.webp"></picture><div class="gallery-overlay"><span>PVC vloerproject</span></div></div>
     </div>
   </div>
 </section>
@@ -156,7 +168,7 @@
 <footer class="footer"><div class="container">
 <div class="footer__grid">
 <div class="footer__brand">
-<div class="f-logo"><img src="https://argaklus.nl/img/logo.png" alt="ARGA klusbedrijf" /></div>
+<div class="f-logo"><img src="img/logo.png" alt="ARGA klusbedrijf" width="140" height="42"></div>
 <p data-lang="nl" class="lang-active">Uw betrouwbare kluspartner in Eindhoven.</p><p data-lang="en">Your reliable partner in Eindhoven.</p><p data-lang="tr">Eindhoven'da güvenilir iş ortağınız.</p>
 <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>Hudsonlaan 220, 5623 NG Eindhoven</div>
 <div class="fci"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>+31 6 41 17 02 08</div>
@@ -198,7 +210,7 @@
   </a>
 </div>
 <div class="footer__bottom">
-<span>&copy; 2024 Argaklus Klusbedrijf Eindhoven</span>
+<span>&copy; 2026 Argaklus Klusbedrijf Eindhoven</span>
 <div class="footer__biz"></div>
 </div>
 </div></footer>
@@ -212,6 +224,7 @@
   <button class="lang-btn" data-switch="en" aria-label="English"><span class="flag-icon"><svg viewBox="0 0 60 40"><clipPath id="gb"><path d="M0 0h60v40H0z"/></clipPath><g clip-path="url(#gb)"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/><path stroke="#C8102E" stroke-width="4" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60"/><path stroke="#C8102E" stroke-width="8" d="M30 0v40M0 20h60"/></g></svg></span><span class="lang-label">English</span></button>
   <button class="lang-btn" data-switch="tr" aria-label="Turkce"><span class="flag-icon"><svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#e30a17"/><circle cx="12" cy="10" r="5.4" fill="#fff"/><circle cx="13.6" cy="10" r="4.3" fill="#e30a17"/><path fill="#fff" d="m20.2 10 4.7-1.5-2.9 4V7.5l2.9 4z"/></svg></span><span class="lang-label">Turkce</span></button>
 </div>
-<script src="app.js?v=13"></script>
+<script>window._argaPageLoad=Date.now();</script>
+<script src="app.js?v=14" defer></script>
 </body>
 </html>

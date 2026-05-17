@@ -205,6 +205,70 @@ function addGermanButtons() {
 addGermanTranslations();
 addGermanButtons();
 
+/* DIENST SELECT TRANSLATIONS */
+const dienstOptions = {
+  nl: {
+    placeholder: 'Selecteer een dienst...',
+    options: [
+      'Aanbouw / Uitbouw',
+      'Veranda & Terassen',
+      'Vloeren PVC/Laminaat / Vloertegels',
+      'Aluminium Balkonleuningen',
+      'Tuinwerkzaamheden',
+      'Badkamer & Toilet Renovatie',
+      'Betonvloer Storten'
+    ]
+  },
+  en: {
+    placeholder: 'Select a service...',
+    options: [
+      'Extension / Home Addition',
+      'Veranda & Terraces',
+      'Floors PVC / Laminate / Tiles',
+      'Aluminium Balcony Railings',
+      'Garden Works',
+      'Bathroom & Toilet Renovation',
+      'Concrete Floor Pouring'
+    ]
+  },
+  tr: {
+    placeholder: 'Bir hizmet seçin...',
+    options: [
+      'Ek Yapı / Genişletme',
+      'Veranda & Teraslar',
+      'Zemin PVC / Laminat / Fayans',
+      'Alüminyum Balkon Korkulukları',
+      'Bahçe İşlemleri',
+      'Banyo & Tuvalet Renovasyonu',
+      'Beton Zemin Döküm'
+    ]
+  },
+  de: {
+    placeholder: 'Leistung auswählen...',
+    options: [
+      'Anbau / Erweiterung',
+      'Veranda & Terrassen',
+      'PVC- / Laminat- / Bodenfliesen',
+      'Aluminium-Balkongeländer',
+      'Gartenarbeiten',
+      'Bad- & Toilettenrenovierung',
+      'Betonboden gießen'
+    ]
+  }
+};
+
+function updateDienstSelect(lang) {
+  const sel = document.getElementById('dienstSelect');
+  if (!sel) return;
+  const t = dienstOptions[lang] || dienstOptions['nl'];
+  const current = sel.value;
+  const currentIndex = Array.from(sel.options).findIndex(o => o.value === current) - 1;
+  sel.options[0].text = t.placeholder;
+  t.options.forEach((text, i) => {
+    if (sel.options[i + 1]) sel.options[i + 1].text = text;
+  });
+}
+
 function setLang(lang) {
   if (!supportedLangs.includes(lang)) lang = 'nl';
   currentLang = lang;
@@ -221,6 +285,7 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.switch === lang);
   });
+  updateDienstSelect(lang);
   document.documentElement.lang = lang;
   localStorage.setItem('argaklus-lang', lang);
 }
@@ -345,7 +410,11 @@ document.querySelectorAll('.faq-q').forEach(q => {
   };
 
   const open = (img) => {
-    fullImage.src = img.currentSrc || img.src;
+    /* Prefer the WebP source:
+       1. data-full-webp attribute (set on every <img> inside <picture>)
+       2. currentSrc  – what the browser actually loaded (WebP when in a <picture>)
+       3. src         – plain fallback (JPG) */
+    fullImage.src = img.dataset.fullWebp || img.currentSrc || img.src;
     fullImage.alt = img.alt || '';
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -385,26 +454,43 @@ if (form) {
 
     const data = new FormData(this);
 
-    fetch('/', {
+    // Bot koruması: timestamp token
+    const _ts = Math.floor((window._argaPageLoad || Date.now()) / 1000);
+    data.append('_token', String(_ts));
+
+    fetch('mail.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       })
-      .then(() => {
-        msgBox.style.display = 'block';
-        msgBox.style.background = '#d1fae5';
-        msgBox.style.color = '#065f46';
-        msgBox.textContent = currentLang === 'de'
-          ? 'Vielen Dank. Ihre Anfrage wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
-          : 'Bedankt. Uw aanvraag is verzonden. Wij nemen zo snel mogelijk contact met u op.';
-        form.reset();
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        if (json.status === 'success') {
+          msgBox.style.display = 'block';
+          msgBox.style.background = '#d1fae5';
+          msgBox.style.color = '#065f46';
+          msgBox.textContent = currentLang === 'de'
+            ? 'Vielen Dank. Ihre Anfrage wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
+            : currentLang === 'en'
+            ? 'Thank you. Your request has been sent. We will contact you as soon as possible.'
+            : currentLang === 'tr'
+            ? 'Teşekkürler. Talebiniz gönderildi. En kısa sürede sizinle iletişime geçeceğiz.'
+            : 'Bedankt. Uw aanvraag is verzonden. Wij nemen zo snel mogelijk contact met u op.';
+          form.reset();
+        } else {
+          throw new Error(json.message || 'error');
+        }
       })
-      .catch(() => {
+      .catch(function() {
         msgBox.style.display = 'block';
         msgBox.style.background = '#fee2e2';
         msgBox.style.color = '#991b1b';
         msgBox.textContent = currentLang === 'de'
           ? 'Verbindungsfehler. Bitte versuchen Sie es später erneut oder schreiben Sie an info@argaklus.nl'
+          : currentLang === 'en'
+          ? 'Connection error. Please try again later or email info@argaklus.nl'
+          : currentLang === 'tr'
+          ? 'Bağlantı hatası. Lütfen daha sonra tekrar deneyin veya info@argaklus.nl adresine e-posta gönderin.'
           : 'Verbindingsfout. Probeer het later opnieuw of mail naar info@argaklus.nl';
       })
       .finally(() => {
