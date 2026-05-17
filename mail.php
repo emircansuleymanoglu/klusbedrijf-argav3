@@ -15,10 +15,18 @@ if (!empty($_POST['website'])) {
     exit;
 }
 
-// JS Token kontrolu: token = epoch saniyesi (sayfa yuklenme zamani)
+// JS Token kontrolu: token yoksa veya gecersizse bot
 $token = trim($_POST['_token'] ?? '');
-$ts    = intval($token);
+$secret = 'argaklus_' . date('Ymd'); // Her gun yenilenen secret
+$expectedPrefix = substr(hash('sha256', $secret), 0, 16);
+if (strlen($token) < 20 || strpos($token, $expectedPrefix) !== 0) {
+    http_response_code(200); // bota basarili goruntusu ver
+    echo json_encode(['status' => 'success']);
+    exit;
+}
+
 // Zaman kontrolu: formun en az 3 saniye acik kalmasi lazim
+$ts = intval(substr($token, 16));
 if ($ts === 0 || (time() - $ts) < 3 || (time() - $ts) > 3600) {
     http_response_code(200);
     echo json_encode(['status' => 'success']);

@@ -410,11 +410,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
   };
 
   const open = (img) => {
-    /* Prefer the WebP source:
-       1. data-full-webp attribute (set on every <img> inside <picture>)
-       2. currentSrc  – what the browser actually loaded (WebP when in a <picture>)
-       3. src         – plain fallback (JPG) */
-    fullImage.src = img.dataset.fullWebp || img.currentSrc || img.src;
+    fullImage.src = img.currentSrc || img.src;
     fullImage.alt = img.alt || '';
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -454,9 +450,10 @@ if (form) {
 
     const data = new FormData(this);
 
-    // Bot koruması: timestamp token
-    const _ts = Math.floor((window._argaPageLoad || Date.now()) / 1000);
-    data.append('_token', String(_ts));
+    // Bot korumasi: JS token uret (sayfa yuklenme zamani + prefix)
+    const _pageLoad = window._argaPageLoad || Date.now();
+    const _ts = Math.floor(_pageLoad / 1000);
+    data.append("_token", (window._argaToken || "") + String(_ts));
 
     fetch('mail.php', {
         method: 'POST',
